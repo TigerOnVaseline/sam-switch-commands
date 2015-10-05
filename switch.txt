@@ -1,0 +1,3768 @@
+5ESSSTART    To get into switch thru sam access
+            1)     REPT CFTSHL TERMINAL IN SERVICE
+               <RCV:MENU:APPRC (must be entered by tech to get into switch)
+            
+            2) tech must enter the type of session they like to do
+               1.8R  -or-  1.8V  (read only mode in switch no changes allowed)
+               1.8U              (update mode allows for changes to be made)
+               1.6I              (install mode used to install new svc)
+               1.6D              (delete mode used to delete existing svc)
+
+5ESSEXAM     Examine Number                                    
+            1) 1.8V (enter)
+            2) tn # NXXXXXX (enter)	
+            3) > (enter) at OE line
+            4) go to desired page by pressing page # then (enter)
+               page 1) general information
+               page 2) call feature list information
+               page 3) more general information (rarely used by us)
+               page 4) voice mail information
+               page 5) extra call forwarding information 
+
+5ESSHUNT    Examine Hunt Group                                   
+           1) 1.8V (enter)
+           2) (enter) (enter) (enter) to get to "MLHG" field
+           3) enter MLHG number (enter)
+           4) enter MEMB 1 (enter) "1 = pilot number" 
+           5) (enter) repeat step 2-4 for each member (2-?) 
+
+      NOTE: /MHR = Regular hunting  &  /MHC = Circular Hunting 
+
+5ESSEXAMSR    Examine Smart Ring Number 
+           1) 1.9R (enter)
+           2) Enter the Main Number in field #1 (enter)
+           3) R (enter)
+             Should bring up Main number & Smart Ring number
+
+5ESSSTOP    To Exit Switch after Examing Number (not after updating)
+           1) < (enter) to get back to main menu
+           2) Q (enter) to exit switch
+           
+5ESSGU     General updating to switch
+           1) 1.8U (enter) at main menu
+           2) tn# NXXXXXX (enter)
+           3) > (enter) at OE line
+           4) Go to page desired (most changes needed are on first page)
+           5) "C" (enter) for change
+           6) field: ?? (select field # needing to be changed)
+           7) make change to field selected (enter) (enter)
+           8) U (enter) to update switch
+           9) Q (enter) < (enter) to get back to main menu
+          10) Q (enter) to exit switch
+
+5ESSHUNT    Change Hunt Group "Class of Service"
+           1) 3.5U (enter) at main menu
+           2) MLHG field: ??? (enter) enter hnt grp number
+           3) "c" (enter) to change
+           4) "2" (enter) , Select one of the following "class of  services" 
+             a) /MHR   (enter) (enter) standard rotary hunt group no Features
+             b) /MHRV  (enter) (enter) rotary hunt group variable /c Features
+             c) /MHRB  (enter) (enter) standard rotary hnt grp /c VMS
+             d) /MHRBV (enter) (enter) rotary hunt group /c VMS & Features
+           5) "u" (enter) to update
+
+5ESSFU    Adding Features directly to switch
+           1) 1.8U (enter) at main menu
+           2) tn # NXXXXXX (enter)
+           3) > (enter) at OE line
+           4) 2 (enter) go to page 2 for updating features
+           5) C (enter) for "change"
+           6) 50 (enter) at the field prompt
+           7) ? (enter) ? = row number of desired row to change or for new
+                                new feature the first blank row #
+           8) /CWT (enter) for call waiting for example see desired feature
+                               below for different features
+                               example: (/CFV)  (N _ N N)
+          
+          10) U (enter) to update changes to switch , if successful switch will
+                           take you back to the front page
+          11) Q (enter) < (enter) to get back to main menu
+          12) Q (enter) to exit switch
+                          
+5ESSDELF    Deleting Features directly from switch
+           1) repeat steps 1-6 from adding features above
+           2) ? (enter) ? = row # of feature that needs to be deleted
+           3) { (enter) ** This Deletes the whole row **
+           4) (enter)  (enter)
+           5) U (enter) to update changes to switch , if successful switch will
+                           take you back to the front page   
+           6) Q (enter) < (enter) to get back to main menu
+           7) Q (enter) to exit switch
+
+5ESSEBB     Add Event Based Billing  
+           1) ABR = 1.6U PAGE 3 -- AR ALW Y
+           2) ACR = 1.6U PAGE 3 -- AC ALW Y
+           3) TWC = 1.6U PAGE 4 -- UTWC ALW Y
+           
+            Remove Event Based Billing or Added "EBBBLK"
+           1) ABR = 1.6U PAGE 3 -- AR ALW N
+           2) ACR = 1.6U PAGE 3 -- AC ALW N
+           3) TWC = 1.6U PAGE 4 -- UTWC ALW N
+           
+5ESSCW      Add Call Waiting (/CWT) (Y _ N N)                   
+          
+5ESSCCW     Add CWT & Cancel CWT (/CWC1) (Y _ N N)                
+             
+            
+5ESSCWID   Manual Updating step by step in Switch                                                                     
+           1) 1.8U <enter>
+           2) go to page #1
+           3) Find the "CID CW" Field (Should be 40)
+           4) Y <enter> to Add feature
+              N <enter> to Delete feature
+              
+        
+5ESSECF			    
+	    To Examine Enhanced Call Fowarding......
+	     1.64V <ENTER>
+	     IN THE FEATURE FIELD = /ASPTERM <ENTER>
+	     PUT IN EITHER THE TN# OR THE OE
+	     IT WILL SHOWS TRIGGERS IF THERE ARE ANY....
+	     ******** ALSO ********
+	     9.9V <ENTER>
+	     1st LN = 1 <ENTER>	
+	     2nd LN = AC+PREFIX <ENTER>	
+	     3rd LN = LAST 4 DGTS OF # <ENTER>
+	     
+	     	             
+5ESSCFV     Add C.F. Variable (/CFV) (N _ N N)                    
+          
+5ESSCFV   **********	TO SET CFV MANUALLY	***********
+		
+		1.8U (ENTER)
+		TN# (ENTER), > (ENTER)
+		CHOOSE PG FOR FEATURES, CHOOSE FIELD, CHOOSE ROW
+		/CFV(TO BE ACTV, SHOULD BE) Y _ N N (ENTER)
+		TO ADD THE # TO FOWARD TO, PG 6
+		CHOOSE FEILD, CHOOSE ROW, ADD /CFV (ENTER)
+		ADD TN# TO FWRD TO (ENTER),(ENTER), N (ENTER),(ENTER),99(ENTER)
+		U TP UPDATE--REST AS USUAL
+	*** NOTE *** CANNOT ADD-ACTV-AND ADD TN# - FEATURE MUST BE ADDED,
+		U=UPDATE,THEN GO BACK AND ACTV AND ADD TN#, UPDATE AGAIN ***
+		
+5ESSCFV     Add C.F. Variable to hunt group
+           1) 1.11U (enter) at main menu
+           2) TN# (enter) , ">" (enter)
+           3) "c" (enter)
+           4) Change Field: ?? (enter)
+           5) select row (enter)
+           6) /CFV  (N _ N N) (enter)
+           7) (enter) (enter) "U" (enter) to update
+
+
+5ESSCFBF    Add Call Fowarding Busy Fixed (/CFBLAC) (N _ N N)
+	    
+5ESSCFNF    Add Call Fowarding No Answer Fixed (/CFDAAC) (N _ N N)
+
+5ESSRCF     Add Remote Call Forwarding (/CFR) (N _ N N)           
+           
+5ESSSC8V    Add Speed-Call 8 (/SC1C) (Y _ N N)                   
+          
+	     To ADD # Speed Call List
+           1) 4.2U
+           2) A & TN # <ENTER>  ** NOTE -- USE 10 DGT # **
+           3) 1 <ENTER>
+           4) speed call #'s 2-7 on page 1 , go to page 2 for #'s 8,9
+           5) <   enter
+           6) Q   <enter>  
+           
+5ESSSC8F    Add Speed-Call 8 (/SC1) (Y _ N N)                     
+           
+5ESSSC30V   Add Speed Call 30 (/SC2C) (Y _ N N)                  
+
+	    To Add # To Speed Call 30 List
+	    1) 4.2U
+	    2) A & TN# <ENTER>    ** NOTE **  USE 10 DIGIT TN#
+	    3) 20, 30, 40 <ENTER>
+	               
+5ESSSC30F   Add Speed Call 30 (/SC2) (Y _ N N)                   
+           
+5ESS3WC     Add Three-Way-Calling (/MW3WC) (Y _ N N)              
+           
+
+5ESSSPLCF   Add Special Call Forwarding (/SCFFR) (N _ N N)       
+           
+            
+5ESSSPLCA   Add Special Call Acceptance (/SCAFR) (N _ N N)       
+           
+            
+5ESSCB      Add Call Block (/SCRFRG) (N _ N N)                   
+           
+            To view call block list 1) 4.48V (at main menu)  
+                                    2) NXXXXXX (enter tn# on line #1 then <e>)
+                                    3) /SCRFRG (enter on line #4 <e>)
+                                    4) go to page 2 (enter)
+            
+            
+5ESSACR     Add Auto Call Return (/LAC1) (N _ N N)                
+           
+            
+5ESSABR     Add Auto Busy Redial (/LAR1) (N _ N N)               
+           
+            
+5ESSVIP     Add VIP Alert (/SDAFR) (N _ N N)                     
+           
+            
+5ESSSR      Add Smart-Ring *** MANUALLY ***
+		1) 1.8U (MSTR #) <ENTER>
+		2) > <ENTER>
+		3) PAGE 2, CHOOSE FIELD AND ROW, INSTALL /DRIC(Y _ N N),U=UPDATE
+		4) BACK OUT TO MAIN MENU - 
+		5) 1.9I (SMRT RNG #) <ENTER>
+		6) CHOOSE FILED, ROW, INSTALL MSTR # ON ROW 2 <ENTER>
+		7) MDRING = B
+		8) I TO INSERT
+	    Remove Smart Ring
+	   	1) 1.9D (SMRT RNG #) <ENTER>
+	   	2) > <ENTER>	  							           
+		3) D <ENTER>
+		
+5ESSCT      Add Call Trace (/COT1) (Y _ N N)                    
+           
+            
+5ESSCNID    Add Caller Number ID (/LICNDA) (Y _ N N)             
+           
+            
+5ESSCNAM    Add Caller Number ID & Calling Name Delivery (/LIRCNMA) (Y _ N N)            
+           
+
+5ESSACRJ    Add Anonymous Call Rejection      
+	   1) 1.6U
+	   2) go to page 4 
+	   3) UCR = Y
+	   
+5ESSCCNDC   Add Cancel Calling Number Delivery Per Call (/DIDNP) (N _ N N)
+           
+	NOTE: Add "PRIVATE=Y" & "PCPALW = Y" for Feature to work Correctly
+	  
+5ESSCCNDL   Add Cancel Calling Number Delivery Per Line (/DIGA) (Y _ N N)
+	   	  	            
+	Note: Manual Updating use (1.6U) & go to Page 3 
+
+       Note: Add "PRIVATE=Y" & "PCP ALW = Y" for Feature to work Correctly
+       Note: Add "PRIVATE=Y" & "PCP ALW = Y" to all lines in Hunt Groups
+
+5ESSECPBLK	To Add an Extended Calling Plan Block
+		-- Read below for the correct value --
+		-- that pertains to your customer --
+		
+		                           LCC
+                           		   ===
+ 		 FLAT RATE +  ECPBLK    =  EF0
+ 		 FR + CR1  +  ECPBLK    =  EF1
+ 		 FR + CR2  +  ECPBLK    =  EF2
+ 		 FR + CR3  +  ECPBLK    =  EF3
+
+ 		 MEASURED RATE + ECPBLK =  EM0
+ 		 MR  +  CR1    + ECPBLK =  EM1
+ 		 MR  +  CR2    + ECPBLK =  EM2
+ 		 MR  +  CR3    + ECPBLK =  EM3
+
+ 		 CENTRANET     + ECPBLK =  EC0
+ 		 CENT +    CR1 + ECPBLK =  EC1
+ 		 CENT +    CR2 + ECPBLK =  EC2
+ 		 CENT +    CR3 + ECPBLK =  EC3
+
+ 		 ISDN          + ECPBLK =  EI0
+ 		 ISDN +    CR1 + ECPBLK =  EI1
+ 		 ISDN +    CR2 + ECPBLK =  EI2
+ 		 ISDN +    CR3 + ECPBLK =  EI3
+
+5ESSDCPBLK	To Add A Directory Connect Plus Block
+		1) 1.6u
+		2) pg 3
+		3) field 92 = "Y" if they have
+			      "N" if they don't
+			      
+5ESSPIC     
+            Manual Pic Change
+           1) 1.6U
+           2) pg 4
+           
+           Note: The Intra-Lata pic should not be in switch if customer wants GTE
+             to continue billing them for those calls. putting "5483 or 5448"
+             in switch will block cust from calling out long distance 
+
+5ESSTD      Add Temporary Disconnect                                        
+           1) 1.6U
+           2) SUSO=Y
+           3) SUST=Y
+
+5ESSRCO     Remove Temporary Disconnect                                    
+           1) 1.6U
+           2) SUSO=N
+           3) SUST=N
+
+5ESSVSR     Add Vacation Service to Line
+           NOTE **  Vacation Svc is same as 5ESSTD, follow above **
+               
+            Delete Vacation Service from Line
+           NOTE **  Vacation Svc is same as 5ESSRCO, follow above **
+
+
+5ESSSWAP    Change Number in Switch
+           1) 1.6U
+           2) C to get Change Field:
+           3) 9 at Change Field Prompt
+           4) Enter New Number <enter> <enter>
+           5) U to update switch
+
+
+5ESSNEW    Initializing new svc Manually into Switch
+          1) 1.6I
+          2) Enter TN Number (enter)
+          3) > (enter) at "OE" line
+          4) (enter) at "CHNG TN" field
+          5) Line Equipment at "CHNG OE" field (enter)
+          6) 'I' or '1-5' at "CHNG PTY" field (enter) (enter) (enter) (enter)
+          7) 'N' or 'Y'   at "MFRI" field (enter) (enter)
+          8) RAX (enter)  
+          9) LCC (enter)  
+         10) TTC = Y or N (enter) 
+         11) > (enter) I (enter)
+         12) after this go back to 1.8u to add features & PIC
+         
+          EXAMPLE: Switch (L 0020027161) becomes (LEN00227161) in Mark
+
+5ESSDEL    Deleting line Manually from Switch
+          1) 1.6D (enter)
+          2) Enter TN Number (enter)
+          3) >  (enter)
+          4) D (enter)
+
+5ESSOPIN   put Deleted line on Operator Intercept Manually in switch
+          1) 1.6I
+          2) Enter TN number (enter)
+          3) > (enter) at OE field , (enter) till you get to LCC field
+          4) 1FR (enter) at LCC field , (enter) till you get to ICP field
+          5) Y (enter) at ICP field
+          6) > (enter) , I (enter) to insert
+           
+5ESSVMS    Add Persec
+          1) 1.8U (enter) at main menu
+          2) tn# NXXXXXX (enter)
+          3) > (enter) at OE line
+          4) page 2
+          5) C (enter)  
+          6) /CFBLAC N _ N N
+          7) /CFDAAC N _ N N
+          8) /VMAIL Y _ N N
+          9) pg 5 
+         10) /VMAIL	/VMAIL
+         11) pg 6 
+         12) /CFBLAC (enter)	VMS access#	
+         13) /CFDAAC (enter)	VMS access#
+         
+         NOTE ** After updating all this you must go back in and change
+         	the /CFBLAC to Y & /CFDAAC to Y to activate **
+         	
+           Customer Controlled Ringing
+           
+          1) Change /CFDAAC to CFDACCR (Y _ N N) 
+	   
+	   Adding Visual Message Waiting Indicator
+	   1.8U
+	   Page 3 change VMAIL to VMAIL2
+	   
+--------------------------------------------------------------------------------
+DCOSTART        Login to Switch                                                       
+               At DCO> prompt type $ADMIN LINE
+               
+DCOABORT       1) ^ <enter> Repeat command to back up to desired location
+
+DCOEXAM         Examine Number                                 
+               EXDI DN XXXXXXX
+
+                Examine line equipment
+	       EXDI EN YYY-YY-YY
+	       
+DCOHUNT         Examine Hunt Group
+               1) EXDI HG ??  (?? = Hunt Group Number)
+               2) enter Pilot or Position number
+               
+            
+DCOSTOP          Log off of Switch                               
+               1) EXIT
+               2) $LOGOFF
+
+DCOSWAP         Change Telephone Number 
+         	CHAN DN NXXXXXX DN NXXXXXX DONE 
+
+DCOTC            Add Touch Call                                  
+                CHAN DN XXXXXXX TONE DONE 
+
+DCODP            Remove Touch Call                               
+                CHAN DN XXXXXXX -TONE DONE 
+
+DCOCW            Add Call Waiting                               
+                CHAN DN XXXXXXX CLWT DONE
+
+                 Remove Call Waiting                           
+                CHAN DN XXXXXXX -CLWT DONE 
+
+DCOCCW           Add Cancel Call Waiting                        
+                CHAN DN XXXXXXX CCWT DONE 
+
+                 Remove Cancel Call Waiting                    
+                CHAN DN XXXXXXX -CCWT DONE 
+
+DCOCWID          Add Call Waiting ID
+		CHAN DN XXXXXXX CIDCW DONE
+		
+		Remove Call Waiting ID
+		CHAN DN XXXXXXX -CIDCW DONE
+
+DCOCFV            Add Call Forwarding Variable                  
+                CHAN DN XXXXXXX CFAV DONE DONE 
+                
+                 To set and activate the CF do
+                CHAN DN XXXXXXX CFAV DEST-ADDR 1NPANXXXXXX ACTIVE DONE DONE
+                       main number                 fwd to # (as dialed)
+            
+                 Remove Call Forwarding Variable                 
+                CHAN DN XXXXXXX -CFAV DONE 
+
+           
+DCOCFF           Add Call Forwarding Fixed & Activating         
+                CHAN DN XXXXXXX CFAF DEST-ADDR 1NPANXXXXXX ACTIVE DONE DONE
+                       
+                 Add Call Forwarding Fixed & not Activating
+                CHAN DN XXXXXXX CFAF DEST-ADDR 1NPANXXXXXX DONE DONE
+                           main #                fwd to # (as dialed)
+                           
+                 Remove Call Forwarding Variable                 
+                CHAN DN XXXXXXX -CFAF DONE               
+
+DCOCFBV          Add Call Forwarding Busy Variable              
+                CHAN DN XXXXXXX CFBLV DONE DONE
+                       
+                 To set and activate the CF do
+                CHAN DN XXXXXXX CFBLV DEST-ADDR 1NPANXXXXXX ACTIVE DONE DONE
+                           main #                  fwd to # (as dialed)
+                           
+                 Remove Call Forwarding Busy Variable                 
+                CHAN DN XXXXXXX -CFBLV DONE   
+
+DCOCFBF          Add Call Forwarding Busy Fixed & Activating        
+                CHAN DN XXXXXXX CFBLF DEST-ADDR 1NPANXXXXXX ACTIVE DONE DONE
+                       
+                 Add Call Forwarding Busy Fixed & not Activating
+                CHAN DN XXXXXXX CFBLF DEST-ADDR 1NPANXXXXXX DONE DONE
+                           main #                 fwd to # (as dialed)
+                           
+                 Remove Call Forwarding Busy Fixed                 
+                CHAN DN XXXXXXX -CFBLF DONE   
+
+DCOCFNV          Add Call Forwarding No Answer Variable             
+                CHAN DN XXXXXXX CFDAV DONE DONE
+                       
+                 To set and activate the CF do
+                CHAN DN XXXXXXX CFDAV DEST-ADDR 1NPANXXXXXX ACTIVE DONE DONE
+                           main #                  fwd to # (as dialed)
+                           
+                 Remove Call Forwarding No Answer Variable                 
+                CHAN DN XXXXXXX -CFDAV DONE   
+
+DCOCFNF          Add Call Forwarding No Answer Fixed & Activating    
+                CHAN DN XXXXXXX CFDAF DEST-ADDR 1NPANXXXXXX ACTIVE DONE DONE
+                       
+                 Add Call Forwarding No Answer Fixed & not Activating
+                CHAN DN XXXXXXX CFDAF DEST-ADDR 1NPANXXXXXX DONE DONE
+                           main #                  fwd to # (as dialed)
+                           
+                 Remove Call Forwarding No Answer Fixed                 
+                CHAN DN XXXXXXX -CFDAF DONE                   
+
+
+DCOSC8V          Add Speed Call 8                                
+                CHAN DN XXXXXXX SC8 DONE DONE
+
+                 Remove Speed Call 8                           
+                CHAN DN XXXXXXX -SC8 DONE 
+
+DCOSC30V         Add Speed Call 30                                
+                CHAN DN XXXXXXX SC30 DONE DONE
+
+                 Remove Speed Call 30                          
+                CHAN DN XXXXXXX -SC30 DONE 
+
+DCO3WC           Add Three Way Calling                          
+                CHAN DN XXXXXXX 3WAY DONE 
+
+                 Remove Three Way Calling                      
+                CHAN DN XXXXXXX -3WAY DONE 
+          
+DCOACR	         Add Auto Call Return
+	        CHAN DN XXXXXXX AR DONE 
+	     
+	         Remove Auto Call Return
+	        CHAN DN XXXXXXX -AR DONE 
+	        
+DCOACRJ		Add Anonymous Call Rejection	
+		CHAN DN XXXXXXX ACRV DONE 
+		
+		Remove Anonymous Call Rejection
+		CHAN DN XXXXXXX -ACRV DONE 	        
+	  
+DCOABR	         Add Auto Busy Redial
+	        CHAN DN XXXXXXX AC DONE 
+	     
+	         Remove Auto Busy Redial
+	        CHAN DN XXXXXXX -AC DONE  
+	     
+DCOCNND	         Add Caller Number + Name ID
+	        CHAN DN XXXXXXX CND CNAM DONE 
+	   
+	         Remove Caller Number + Name ID
+	        CHAN DN XXXXXXX -CND -CNAM DONE 
+
+DCOCCNDL         Add Cancel Call Number Delivery Per Line
+	        CHAN DN XXXXXXX CNDB DONE 
+	    
+	         Remove Cancel Calling Number Delivery Per Line
+	        CHAN DN XXXXXXX -CNDB DONE 
+	    
+DCOCT	         Add Call Tracing Service
+	        CHAN DN XXXXXXX COTR DONE 
+	   
+	         Remove Call Tracing Service
+	        CHAN DN XXXXXXX -COTR DONE 	    	   	     
+
+DCOSR		Add Smart Ring Service
+		CHAN DN XXXXXXX SIRA AUX1-DN YYYYYYY DONE DONE
+		
+		Remove Smart Ring Service
+		CHAN DN XXXXXXX -SIRA DONE
+				
+DCOVIP		Add Vip Alert
+		CHAN DN XXXXXXX DRCW DONE DONE
+		
+		Remove Vip Alert 
+		CHAN DN XXXXXXX -DRCW DONE 
+		
+			     	  	  
+DCOCB            Add Call Block
+                CHAN DN XXXXXXX SCR DONE DONE
+                
+                 Remove Call Block
+                CHAN DN XXXXXXX -SCR DONE 
+		
+		 To Add A # To Call Block List
+		CHAN DN XXXXXXX SCRDN XXXXXXX DONE DONE
+		
+		 To Activate Call Block List
+		CHAN DN XXXXXXX SCRAC DONE DONE
+		
+DCOSPLCF         Add Special Call Forwarding
+                CHAN DN XXXXXXX SCF DONE DONE
+                
+                 Remove Special Call Forwarding
+                CHAN DN XXXXXXX -SCF DONE 
+                
+DCOSPLCA         Add Special Call Acceptance
+                CHAN DN XXXXXXX SCA DONE DONE
+                
+                 Remove Special Call Acceptance
+                CHAN DN XXXXXXX -SCA DONE 
+                  
+DCOPIC        Change Pic
+              2) Change PIC--LD (INTER-LATA) Carrier
+                CHAN DN XXXXXXX 0+INTER-CIC 0??? 1+INTER-CIC 0??? DONE 
+          
+                 Remove PIC--LD (INTER-LATA) Carrier
+                CHAN DN XXXXXXX 0+INTER-CIC NONE 1+INTER-CIC NONE DONE 
+
+              3) Change PIC--LD (INTRA-LATA) Carrier
+                CHAN DN XXXXXXX 0+INTRA-CIC 0??? 1+INTRA-CIC 0??? DONE 
+          
+                 Remove PIC--LD (INTRA-LATA) Carrier
+                CHAN DN XXXXXXX 0+INTRA-CIC NONE 1+INTRA-CIC NONE DONE 
+
+              4) Change PIC--LD (INTERNATIONAL) Carrier
+                CHAN DN XXXXXXX 01-INTL-CIC 0??? 011-INTL-CIC 0??? DONE 
+          
+                 Remove PIC--LD (INTERNATIONAL) Carrier
+                CHAN DN XXXXXXX 01-INTL-CIC NONE 011-INTL-CIC NONE DONE
+
+       Note: The Intra-Lata pic should not be in switch if customer wants GTE
+             to continue billing them for those calls. putting "5483 or 5448"
+             in switch will block cust from calling out long distance 
+                
+DCOHUNT          Change PIC--LD Carrier in Hunt Group
+              1) a) $ADMIN HG
+                 b) CHAN HG ?? PIC ??? DONE 
+                   
+              2) Change PIC--LD (INTER-LATA) Carrier
+                CHAN HG ?? 0+INTER-CIC 0???1+INTER-CIC 0??? DONE
+                
+                 Remove PIC--LD (INTER-LATA) Carrier
+                CHAN HG ?? 0+INTER-CIC NONE 1+INTER-CIC NONE DONE
+
+              3) Change PIC--LD (INTRA-LATA) Carrier
+                CHAN HG ?? 0+INTRA-CIC 0??? 1+INTRA-CIC 0??? DONE 
+          
+                 Remove PIC--LD (INTER-LATA) Carrier
+                CHAN HG ?? 0+INTRA-CIC NONE 1+INTRA-CIC NONE DONE
+
+              4) Change PIC--LD (INTERNATIONAL) Carrier
+                CHAN HG ?? 01-INTL-CIC 0??? 011-INTL-CIC 0??? DONE 
+          
+                 Remove PIC--LD (INTERNATIONAL) Carrier
+                CHAN HG ?? 01-INTL-CIC NONE 011-INTL-CIC NONE DONE 
+
+                                 
+DCOTD            Add Temp. Disc.                                   
+                SUS XXXXXXX    (use this first if possible)
+                      -or-
+                CHAN DN XXXXXXX LCC TDIS DONE 
+
+DCOHUNT          Add Temp. Disc. (Hunt Group)
+                1) ADMIN HG
+                2) EXDI HG ??
+                3) "PILOT" OR "POS #"
+                4) SUS HG ?? (I Think????)
+            
+DCORCO           Remove Temp. Disc.                             
+                RES XXXXXXX
+                      -or-
+                CHAN DN XXXXXXX LCC (CLASS OF SVC) DONE 
+                  
+DCOHUNT          Remove Temp. Disc. (Hunt Group)
+                1) ADMIN HG
+                2) EXDI HG ??
+                3) "PILOT" OR "POS #"
+                4) RES HG ?? (I Think????)
+
+            
+DCOVSR          Add Vacation Service to Line
+               SUS XXXXXXX -or- CHANGE DN XXXXXXX LCC TDIS DONE 
+               
+                Delete Vacation Service from Line
+               RES XXXXXXX -or- CHANGE DN XXXXXXX LCC (CLASS OF SVC) DONE
+		         
+DCONEW       Install New Line                              
+                ADD 000-00-00 (CLASS OF SVC) XXXXXXX 0+INTER-CIC 0??? 
+                    lni equip                  tn #    inter cxr
+
+                1+INTER-CIC 0??? 0+INTRA-CIC 0??? 1+INTRA-CIC 0??? 
+                                   intra cxr
+
+                01-INTL-CIC 0??? 011-INTL-CIC 0??? TONE (FEATURES) DONE DONE
+                   intl cxr                      touch call
+                 
+                              
+DCODEL	         Delete a line
+	        DELE DN XXXXXXX             
+
+DCOOPIN          putting Vacant Number on Operator Intercept
+                CHAN DN XXXXXXX ???  (??? = intercept code found in "blocks"
+                                        file in Norths Blocks File in OLHB)  
+                                            
+--------------------------------------------------------------------------------
+ 
+DMS10START      Login/Begin Recent Change                         
+            ####
+              #OVLY DN (enter) wait for REQ prompt may take a while 
+            
+DMS10MSG	To Send A Message Thourgh Switch To Another User
+		# MSG 6 -------------   (enter)
+		      ^  ^^^^^^^^^^^   
+	EMPLYEE USNG PORT  YOUR MSSG
+	
+DMS10MON	To Monitor The Actions Of an Employee
+		# MON 6		 --ENTER--
+		      ^
+	THIS IS THE EMPLOYEE #	            
+     
+
+DMS10ABORT       To abort in switch (changes will not be saved) 
+                1) ####  (may get you out if not go to step #2)
+                2) **** (enter) 
+                3) OVLY DN (enter)  to get back into system
+
+DMS10EXAM        Examine Number                                    
+                QUE STN XXX XXXX
+             
+DMS10EXAM        Examine Line Equip.                              
+                1) **** (enter)
+                2) OVLY ODQ (enter)
+                3) LIST LINE UNIT (enter)
+                4) PE 00 0 00 0   (enter)
+                   LCE 0 00 0 00  
+                   (LNI may vary from switch to switch if any questions bring
+                    up an active number in switch & check the format)
+
+DMS10HUNT        Examine Hunt Group
+                1) **** (enter)
+                2) OVLY HUNT
+                3) QUE DNH ???
+                   ??? = may vary from SW to SW if any questions bring up a
+                         member's phone # to get correct # layout.
+                4) **** (enter) to exit switch
+
+DMS10LOCK        Busy out Hunt Group line
+                ADO STN NXX XXXX RMB (LATA) (LCE XX X XX XX)
+                                             Line Equipment
+                
+                 Put line back into Service (Unbusy line)
+                DLO STN NXX XXXX RMB
+                           
+DMS10STOP        End Recent Change                                 
+                1) **** (enter)  takes you out of recent change for logout
+                2) LOGO (enter)  not required in new care switch access
+     
+DMS10TC          Add Touch Call                                    
+                ADO STN XXX XXXX DGT
+
+DMS10DP          Remove Touch Call                                  
+                DLO STN XXX XXXX DGT
+
+
+MS10CW          Add Call Waiting                                 
+                ADO STN XXX XXXX CWT
+
+                 Remove Call Waiting                            
+                DLO STN XXX XXXX CWT
+
+DMS10CCW         Add Cancel Call Waiting                           
+                ADO STN XXX XXXX CCWT
+             
+                 Remove Cancel Call Waiting       
+                DLO STN XXX XXXX CCWT
+
+DMS10CFV         Add Call Forwarding Variable                     
+                ADO STN XXX XXXX CFW
+
+                 Activate Call Forwarding Varible
+                ACT STN XXX XXXX CFW yyyyyyy
+                          tn #       cf to #
+                          
+                 Deactivate Call Forwarding Variable
+                DACT STN XXX XXXX CFW 
+
+                 Exam Call Forwarding
+	        QACT STN XXX XXXX 
+	        
+                 Remove Call Forwarding Variable                      
+                DLO STN XXX XXXX CFW
+
+DMS10CFF         Add Call Forwarding Fixed
+                ADO STN XXX XXXX CFW FIXD YYYYYYY
+                         main #           cf to #
+
+                 Exam Call Forwarding
+                QACT STN XXX XXXX
+                
+                 Remove Call Forwarding Fixed
+                DLO STN XXX XXXX CFW
+
+DMS10CFBF        Add Call Forwarding Busy Fixed
+                ADO STN XXX XXXX CFB
+                
+                 Remove Call Forwarding Busy Fixed
+                DLO STN XXX XXXX CFB
+		
+		Activate Call Fowarding Busy Fixed	
+		ACT STN XXX XXXX CFB yyyyyyy
+		
+		Deactivate Call Fowarding Busy Fixed
+		DACT STN XXX XXXX CFB
+		
+		Exam Call Fowarding Busy Fixed
+		QACT STN XXX XXXX CFB
+
+DMS10CFNF        Add Call Forwarding No Answer Fixed
+                ADO STN XXX XXXX CFD
+                
+                 Remove Call Forwarding No Answer Fixed
+                DLO STN XXX XXXX CFD
+		
+		 Activate Call Fowarding No Answer Fixed
+		ACT STN XXX XXXX CFD yyyyyyy
+		
+		Deactive Call Fowarding No Answer Fixed
+		DACT STN XXX XXXX CFD
+		
+		Exam Call Fowardng No Answer Fixed
+		QACT STN XXX XXXX CFD
+
+
+DMS10CFBNF       Add Call Forwarding Busy/No Answer Fixed
+                ADO STN XXX XXXX CFB CFD 
+                
+                 Remove Call Forwarding Busy/No Answer Fixed
+                DLO STN XXX XXXX CFB CFD       
+
+		Activate Call Fowarding Busy/No Answer Fixed
+		ACT STN XXX XXXX CFB yyyyyyy CFD yyyyyyy
+	
+	** NOTE ** TO CHANGE AMOUNT OF RNGS LN FWRDS ON, ADD AN R? TO THE
+		   END OF ABOVE SENTENCE....<? = # OF RNGS>
+		   
+		Deactivate Call Fowarding Busy/No Answer Fixed
+		DACT STN XXX XXXX CFB CFD
+		
+		Exam Call Fowarding Busy/No Answer Fixed
+		QACT STN XXX XXXX 
+		
+DMS10RCF         Add Remote Call Forwarding
+	        NEW RCFA XXX XXXX YYYYYYYYYYY 1FR OPT1 (YYYYY = cf to #)
+	                     -or-
+	        NEW RCFA XXX XXXX YYYYYYYYYYY 1FR RTP 0
+	  
+	         Remove Remote Call Forwarding 
+	        DEL RCFA XXX XXXX	   	            
+
+DMS10SC8V        Add Speed Call 8                                 
+                ADO STN XXX XXXX SSC
+
+                 Remove Speed Call 8                               
+                DLO STN XXX XXXX SSC
+
+DMS10SC30V       Add Speed Call 30                               
+                ADO STN XXX XXXX LSC
+
+                 Remove Speed Call 30                          
+                DLO STN XXX XXXX LSC
+
+DMS103WC        Add Three Way Calling                            
+                ADO STN XXX XXXX 3WC
+
+                 Remove Three Way Calling                          
+                DLO STN XXX XXXX 3WC
+
+
+DMS10ACR         Add Auto Call Return                             
+               ADO STN XXX XXXX AR 2 	
+               
+               Remove Auto Call Return                   
+                DLO STN XXX XXXX AR 2
+          
+DMS10ABR         Add Auto Busy Redial                            
+                ADO STN XXX XXXX ACB
+
+         	Remove Auto Busy Redial                     
+                DLO STN XXX XXXX ACB
+          
+DMS10CB	         Add Call Block                                   
+	        ADO STN XXX XXXX SCR 12
+		
+		To View A Call Block List	
+		# OVLY ODQ
+		REQ LIST DN XXX XXXX STN SCRL
+          
+	  
+        	 Remove Call Block
+	        DLO STN XXX XXXX SCR	            
+
+DMS10VIP         Add VIP Alert
+                ADO STN NXX XXXX SDR 12
+                
+                 Remove VIP Alert
+                DLO STN NXX XXXX SDR
+          
+
+DMS10CNID        Add Caller Number I.D.                        
+                ADO STN XXX XXXX CND
+
+        	Remove Caller Number I.D.                     
+                DLO STN XXX XXXX CND
+
+          
+DMS10CNND        Add Calling Name Delivery                        
+                ADO STN XXX XXXX CND CNAM
+
+          	Remove Calling Name Delivery                     
+                DLO STN XXX XXXX CNAM
+
+
+DMS10CCNDL       Add Calling Number/Name Delivery Blocking                         
+                ADO STN XXX XXXX CNB CNAB	or	SUPR
+
+                 Remove Calling Number/Name Delivery Blocking                     
+                DLO STN XXX XXXX CNB CNAB	or	SUPR
+
+DMS10ACRJ        Add Anonymous Call Rejection
+	        ADO STN XXX XXXX ACR
+
+         	Remove Anonymous Call Rejection
+	        DLO STN XXX XXXX ACR
+	             
+
+DMS10CT          Add Call Tracing Service
+                ADO STN XXX XXXX COT 1 (automatically traces last #)
+                ADO STN XXX XXXX COT 2 (prompts customer to trace last #)
+          
+DMS10SPLCF       Add Special Call Forwarding
+                ADO STN XXX XXXX SCF
+                
+                 Remove Special Call Forwarding
+                DLO STN XXX XXXX SCF
+               
+DMS10SPLCA       Add Special Call Acceptance
+                ADO STN XXX XXXX SCA
+                
+                 Remove Special Call Acceptance
+                DLO STN XXX XXXX SCA
+
+DMS10BLOCK       Add 900/976/700 blocks or Toll Restrictions
+                ADO STN XXX XXXX (Block Code)
+                
+                Block Codes
+                Mark = TRBOTH	SW = TDN
+                Mark = TR1	SW = RES1
+                Mark = 900/976	SW = OPT2 
+                           
+DMS10PIC      1)  Adding or Changing PIC Carrier (Interlata-EPIC-PRE)                    
+                 ADO STN XXX XXXX PRES 0???
+                 
+                  Delete PIC--LD Carrier
+                 DLO STN XXX XXXX PRES
+
+             	Adding or Changing PIC Carrier (Intralata-APIC-PRA)
+              2) ADO STN XXX XXXX PRS2 0XXX !MPC
+                
+                  Delete PIC--LD Carrier
+                 DLO STN XXX XXXX PRS2 !MPC
+
+       Note: The Intra-Lata pic should not be in switch if customer wants GTE
+             to continue billing them for those calls. 
+               putting "5448" = blocks cust from calling out L.D. & Local
+               putting "5483" = Is Only added when cust has Easy Savings Plan 
+
+DMS10TD	         Add Temporary Disconnect
+	        SUS STN XXX XXXX
+	 
+DMS10RCO	 Remove Temporary Disconnect
+	        RES STN XXX XXXX
+
+DMS10VSR         Add Vacation Service to Line
+                SUS STN XXX XXXX
+               
+                 Delete Vacation Service from Line
+                RES STN XXX XXXX
+
+DMS10SR	         Add Smart Ring
+	        ADO STN XXX XXXX TEEN YYY YYYY 
+	                 main #      smart ring #
+	        
+	        Delete Smart Ring
+	        DLO STN XXX XXXX TEEN YYY YYYY
+	         
+DMS10SWAP       Change Number                                     
+               CHDN STN XXX XXXX XXX XXXX
+                         old #     new #
+                          
+DMS10NEW   Install new line with Flat Rate Svc (chose one per LNI format)
+
+	  1) NEW STN XXX XXXX (LATA) LCE XX X XX XX 1FR DGT PRES 0???  
+	     
+	  2) NEW STN XXX XXXX (LATA) LCE XX X XX X 1FR DGT PRES 0???   
+              
+ Remote = 3) NEW STN XXX XXXX (LATA) PE XX X XX X 1FR DGT PRES 0??? 
+                
+           Install New Line with Measured Rate Svc
+
+          1) NEW STN XXX XXXX (LATA) LCE XX X XX XX 1MR RCO R1 DGT PRES 0???   
+      
+DMS10HUNT  Install new Sequential Hunt Group in switch
+
+          1) OVLY HUNT 
+          2) NEW DNH ?? NO NO SEQ NORM
+          3) ****
+          4) OVLY DN
+       
+       Step #5 is for Pilot number (Only done once)
+          
+          5) NEW STN XXX-XXXX LCE XX X XX XX DNH ?? FRST 1FR DGT RTP 0
+          	PRES 0???  
+                
+      
+       Step #6 is done for each Member in hunt
+         
+          6) NEW STN XXX-XXXX LCE XX X XX XX DNH ?? YYY-YYYY 1FR DGT RTP 0
+          	PRES 0??? 
+                 
+                   
+DMS10DEL	Delete a line
+	       DEL STN XXX XXXX
+	       
+	        Delete a line & put on EDT service
+	    1) NEW STN NXX XXXX LCE XX X XX XX 1FR !EDT DGT PRES 9000
+	    2) SUS STN NXX XXXX
+	      
+DMS10OPIN       Putting Vacant Number on Operator Intercept
+               ICP DN XXX XXXX ROUT VCDN  (general operator recording)
+               
+               ICP DN XXX XXXX ROUT DNCH  (number change recording)             
+
+DMS10ERROR      Error Messages & what they mean
+               DMO363 = Vacant Number
+              
+               DMO376 = New Install Error Requiring (RCO R1) in New Programming
+               
+               DMO396 = Number is in a Remote off Base Unit
+              
+               DMO425 = Invalid data imputed Retype Request
+             
+               DMO449 = Not A Valid TN Number Imputed 
+               
+               DMO499 = Check line for "RCO R1". This will need to be removed. 
+                        Deleting "RCO R1" requires deleting entire svc & 
+                        reinstalling it without it.
+                        
+--------------------------------------------------------------------------------
+
+DMS100EXAM      Examine Number                                   
+               QDN XXXXXXX
+
+                Examine Line Equip.                              
+               QLEN HOST 00 0 00 00
+
+DMS100START     Begin Recent Change                             
+               SERVORD  (required to start a recent change session)
+            
+DMS100STOP	To End a Recent Change Session & saves the changes to the line 
+	       QUIT  (required if SERVORD was entered prior to this)             
+
+DMS100LOCK      Forcing number OOS in switch
+               ADO $ NXXXXXX MSB $ Y
+               
+                Putting number back in Svc in switch
+               DEO $ NXXXXXX MSB $ Y
+
+DMS100LCP       Community Calling Plans
+               CHG $ LINE NXXXXXX LCC 1MR (LATA) ?? Y
+               
+               ?? = Cltg Code: found in OLHB Blocks File or use there current
+                               code found in switch. It will not change!!
+
+DMS100EBB       To Block PPU (TWC, ACR, ABR)
+               ADO $ XXXXXXX DENYU3WC DENY DENYAR DENYACB $ $ Y
+               
+               To Allow PPU (TWC, ACR, ABR)
+               DEO $ XXXXXXX DENYU3WC DENY DENYAR DENYACB $ $ Y
+		
+DMS100TC        Add Touch Call                                     
+               ADO $ XXXXXXX DGT $ Y
+
+DMS100DP        Remove Touch Call                                
+               DEO $ XXXXXXX DGT $ Y
+
+DMS100CW        Add Call Waiting                                  
+               ADO $ XXXXXXX CWT $ Y
+
+                Remove Call Waiting                         
+               DEO $ XXXXXXX CWT $ Y
+
+DMS100CCW       Add Cancel Call Waiting                          
+               ADO $ XXXXXXX CCW $ Y
+
+                Remove Cancel Call Waiting                   
+               DEO $ XXXXXXX CCW $ Y
+
+DMS100CWID      Add Call Waiting ID 
+		ADO $ XXXXXXX SCWID $ Y
+               
+                Remove Call Waiting ID 
+                DEO $ XXXXXXX SCWID $ Y
+          
+DMS100ECF	Add Enhanced Call Fowarding Trigger
+		ADO $ XXXXXXX AINDN ECFTRIG $ Y
+		
+		Remove Enhanced Call Fowarding Trigger
+		DEO $ XXXXXXX AINDN $ Y
+		
+DMS100CFV       Add Call Forward Variable                        
+               ADO $ XXXXXXX CFW C NSCR 1 $ Y
+
+                Remove CF-Variable                          
+               DEO $ XXXXXXX CFW $ Y
+               
+        To Activate CF in Switch (Have to access Table to do it)
+               
+     Tech's Imput: > TABLE CFX;POS HOST XX X XX XX 0
+     
+     Tech's Imput: >CHA
+      Sw Response: CFUIF: Y
+     Tech's Imput: >  <enter>
+      Sw Response: CFBD: N
+     Tech's Imput: >  <enter>
+      Sw Response: CSTATE: I             
+     Tech's Imput: >A  <enter>  (A - TO ACTIVATE-- I - TO DEACTIVATE)
+      Sw Response: CFUIFDN: 
+     Tech's Imput: ># TO FWRD TO  <enter>
+      Sw Response: TUPLE TO BE CHANGED:
+      Sw Response: HOST  XX X XX XX  X
+      Sw Response:                            Y  N          A    1NPAnxxxxxx
+               
+DMS100CFF       Add Call Forwarding Fixed not Activated
+               ADO $ XXXXXXX CFW F NSCR 1 I YYYYYYY $ Y
+                     main #                 fwd to #
+               
+                Add Call Forwarding Fixed Activated
+               ADO $ XXXXXXX CFW F NSCR 1 A YYYYYYY $ Y
+                     main #                 fwd to #
+               
+                Remove Call Forwarding Fixed
+               DEO $ XXXXXXX CFW $ Y
+
+
+
+DMS100CFBF      Add Call Forwarding Busy Fixed (always active)
+               ADO $ XXXXXXX CFBL NSCR 1 YYYYYYY $ Y
+                      main #             fwd to #
+                      
+                Remove Call Forwarding Busy Fixed
+               DEO $ XXXXXXX CFBL $ Y 
+
+
+DMS100CFNF      Add Call Forwarding No Answer Fixed (always active)
+               ADO $ XXXXXXX CFDA NSCR 1 20 FIXRING YYYYYYY $ Y
+                      main #                        fwd to #
+                      
+                Remove Call Forwarding No Answer Fixed
+               DEO $ XXXXXXX CFDA $ Y                   
+
+
+DMS100CFBNF     Add Call Forwarding Busy/No Answer Fixed 
+          ADO $ XXXXXXX CFDA NSCR 1 20 FIXRING YYYYYYY CFBL NSCR 1 YYYYYYY $ Y
+                 main #                        fwd to #            fwd to #
+                      
+                Remove Call Forwarding Busy/No Answer Fixed
+               DEO $ XXXXXXX CFBL CFDA $ Y 
+
+DMS100CNETVMS 	ADD CF BSY NO ANSWR FIXED TO CNET
+	ADO $ XXXXXXX CFDVT 20 CFD F yyyyyyy CFB F yyyyyyy CBU CDU $ Y
+	
+			REMOVE CF BSY NO ANSWR FROM CNET
+		DEO $ XXXXXXX CFDVT CFD CFB CDU CBU $ Y
+
+DMS100RCF       Delete Remote Call Forwarding
+      		OUTDN $ NPA NO XXXXXXX BLDN Y
+
+DMS100SPLCA     Add Special Call Acceptance
+               ADO $ XXXXXXX SCA INACT $ $ Y
+               
+                Delete Special Call Acceptance
+               DEO $ XXXXXXX SCA $ Y
+
+DMS100SPLCF     Add Special Call Forwarding
+               ADO $ XXXXXXX SCF INACT $ $ NSCR 50 NA $ Y
+               
+                Delete Special Call Forwarding
+               DEO $ XXXXXXX SCF $ Y
+
+DMS100SC8V      Add Speed Call 8                                
+               ADO $ XXXXXXX SC1 $ Y
+
+                Remove Speed Call 8                          
+               DEO $ XXXXXXX SC1 $ Y
+		
+		To View Speed Call List
+		TABLE IBNSC (ENTER)
+                1->X (ENTER)
+                REPEAT 10 (POS HOST XX XX XXX XX SCS X;X+1->X) (ENTER)
+                
+                ---USE REPEAT 30, 20->X & SCL FOR SC30.
+                ---USE SC1 (8) OR SC2 (30) FOR BUSINESS SVC
+                
+DMS100SC30V     Add Speed Call 30                                 
+               ADO $ XXXXXXX SC2 $ Y
+
+                Remove Speed Call 30                        
+               DEO $ XXXXXXX SC2 $ Y
+
+DMS1003WC       Add Three Way Calling                             
+               ADO $ XXXXXXX 3WC $ Y
+
+                Remove Three Way Calling                     
+               DEO $ XXXXXXX 3WC $ Y
+
+
+DMS100CB        Add Call Block                                   
+               ADO $ XXXXXXX SCRJ INACT $ $ Y                    
+           
+                Add Call Block & Adding # to list to be Blocked                         
+               CHL $ XXXXXXX SCRJ NOAMA ACT A yyyyyyyyyy 1 $ $ Y
+          		 
+     NOTE: AFTER NOAMA <ACT OR INACT>...AFTER THAT <A = ADD> <D = DEL> A TN
+     		<yyyyyyyyy> IS THE TN YOU'RE ADDING....<1-10> IS THE 
+     		POSITION THE ADDED OR DELETED TN IS IN          
+     
+           	To view the Call Block list 
+               1) QSL XXXXXXX SCRI F  
+               2) QSL XXXXXXX ALL
+           
+                Remove Call Block                             
+               DEO $ XXXXXXX SCRJ $ Y
+
+
+DMS100ACR       Add Auto Call Return                               
+               ADO $ XXXXXXX AR NOAMA $ Y
+
+                Remove Auto Call Return                       
+               DEO $ XXXXXXX AR $ Y
+
+            
+DMS100ABR       Add Auto Busy Redial                             
+               ADO $ XXXXXXX ACB $ Y
+
+                Remove Auto Busy Redial                      
+               DEO $ XXXXXXX ACB $ Y
+
+            
+DMS100VIP       Add VIP Alert                                     
+               ADO $ XXXXXXX DRCW INACT $ $ Y
+
+                Adding #'s to VIP Alert                 
+               See DMS100CB, it's the same
+     
+                Remove VIP Alert                             
+               DEO $ XXXXXXX DRCW $ Y
+
+
+DMS100CT        Add Call Trace				           
+	       ADO $ XXXXXXX COT $ Y          
+
+                Remove Call Trace                         
+               DEO $ XXXXXXX COT $ Y
+
+
+DMS100SR        Add Smart-Ring Number                              
+               ADO $ XXXXXXX SDN yyyyyyy 1 P $ $ Y
+		
+		To Change a Smart Ring # 
+		CHF $ XXXXXXX SDN yyyyyyy ttttttt 1 P $ $ Y
+		
+		** NOTE ** <y = old sr#> ** <t = new sr#> **
+		
+                Remove Smart Ring
+	       DEO $ XXXXXXX SDN yyyyyyy $ Y
+
+DMS100CNND      Add Caller Number I.D. & Calling Name Delivery 
+               1) ADO $ XXXXXXX CND CNAMD $ Y
+  	       2) ADO $ XXXXXXX CND NOAMA CNAMD NOAMA $ Y
+               
+                "NOAMA" is also required for CND in some switches & not needed
+                        for either feature in others.
+               
+                Remove Caller Number I.D. & Calling Name Delivery
+               DEO $ XXXXXXX CND CNAMD NOAMA $ Y
+
+
+DMS100ACRJ      Add Anonymous Call Rejection 
+	       ADO $ XXXXXXX ACRJ INACT $ Y
+	       
+	        Remove Anonymous Call Rejection
+	       DEO $ XXXXXXX ACRJ $ Y
+
+DMS100CCNDC     Add Cancel Caller Number Delivery per Call                             
+               ADO $ XXXXXXX CNDB $ Y
+
+                Remove Cancel Caller Number Delivery per Call                     
+               DEO $ XXXXXXX CNDB $ Y
+
+DMS100CCNDL     Add Cancel Caller Number Delivery per Line                             
+               ADO $ XXXXXXX CNDB NOAMA SUPPRESS PUBLIC Y Y $ $ Y
+                                                  
+                Remove Cancel Caller Number Delivery per Line                     
+               DEO $ XXXXXXX SUPPRESS $ Y
+
+DMS100REV       Add revert call
+	       ADO $ XXXXXXX INT $ Y
+	       
+	        Remove revert call
+	       DEO $ XXXXXXX INT $ Y
+
+DMS100VMS       Add Persec  
+     1) ADO $ XXXXXXX CFDA NSCR 3 20 FIXRING YYYYYYY CFBL NSCR 3 YYYYYYY $ Y 
+	        main #             persec access #     persec access #
+	                 
+      2) ADO $ XXXXXXX MWT STD Y NO N $ Y
+
+     		 Remove Persec                 
+     		DEO $ XXXXXXX CFDA CFBL MWT $ Y
+	  	       
+      		Visual Message Waiting Indicator
+      		ADO $ XXXXXXX MWT CMWI Y N N N $ Y
+      	** NOTE ** IF REG STDDRD DT EXSISTS ALREADY DO "CHF" INSTEAD OF "ADO"
+      	
+      		Customer Controlled Ringing
+     ADO $ XXXXXXX CFDA NSCR 3 20 PRGRING YYYYYYY CFBL NSCR 3 YYYYYYY $ Y
+	     main #                     persec access #     persec access #     
+
+DMS100VMSHUNT	Add Persec to Line Hunt
+	1) Main Line
+		ADO $ XXXXXXX CFGDA NSCR 1 20 YYYYYYY LOD YYYYYYY $ Y
+		
+	2)All Members get same as above
+	  
+DMS100PIC       Adding PIC when no pic is on line                
+               1) ADO $ XXXXXXX PIC XXX Y $ Y (Interlata-EPIC-PRE)
+               
+               2) ADO $ XXXXXXX LPIC XXX Y $ Y (Intralata-APIC-PRA)
+             
+                Change PIC when PIC is already on line                                         
+               1) CHF $ XXXXXXX PIC XXX Y $ Y (Interlata-EPIC-PRE)
+               
+               2) CHF $ XXXXXXX LPIC XXX Y $ Y (Intralata-APIC-PRA)
+            
+                Remove PIC (no carrier in switch)
+               1) CHF $ NXXXXXX PIC NILC Y $ Y (Interlata-EPIC-PRE)
+               
+               2) CHF $ NXXXXXX LPIC NILC Y $ Y (Intralata-APIC-PRA)
+               
+                To put customer on GTE L.D.
+               1) DEO $ XXXXXXX LPIC $ Y
+
+       Note: The Intra-Lata pic should not be in switch if customer wants GTE
+             to continue billing them for those calls. putting "5483 or 5448"
+             in switch will block cust from calling out long distance 
+
+DMS100TD        Add Temp. Disc.                                   
+               SUS $ XXXXXXX HOST 00 0 00 00 Y 
+             
+DMS100RCO       Remove Temp. Disc.                                
+               RES $ XXXXXXX Y   
+
+DMS100SWAP      Change Phone Number                              
+               CDN $ XXXXXXX XXXXXXX BLDN $ Y
+                      old #   new #
+                      
+                Change Line Equipment
+               CLN $ HOST XX X XX XX HOST XX X XX XX Y
+                        old LNI         new LNI
+
+DMS100BLOCK   
+                Must Delete Carrier for Toll Restrictions to Work
+               CHF $ NXXXXXX PIC NILC N $ Y
+               
+               Toll Restrictions
+               Mark = TRBOTH	SW = TDN
+               Mark = TR1	SW = RSP
+
+DMS100DCPBLK	To Add A Directory Connect Plus Block
+		ADO $ XXXXXXX RSP $ Y
+		
+		To Remove A Directory Connect Plus Block 
+		DEO $ XXXXXXX RSP $ Y      
+		
+		-- NOTE -- DBAC MUST HAVE A SCREEN CODE OF 36
+		
+DMS100NEW	
+
+             1) Add New Service 
+               NEW $ XXXXXXX 1FR (LATA) ? HOST XX X XX XX DGT PIC ??? Y $ Y 
+
+DMS100DEL       Delete a line                                    
+               OUT $ XXXXXXX HOST 00 0 00 00 BLDN Y
+               
+DMS100OPIN      Operator Intercepts
+               OUT $ XXXXXXX HOST 00 0 00 00 ANCT Y (When Del Svc) 
+               CICP $ XXXXXXX ANCT Y (When Svc Already Del)
+
+                Remove Operator Intercepts
+               CICP $ XXXXXXX BLDN Y
+
+DMS100TEST      Testing a line in the switch.
+	       1) MAPCI;MTC;LNS;LTP;LTPLTA
+	       2) POST D XXXXXXX
+	       3) Has to be in IDLE state. You can do a busy-override FRLS 
+	          (force release)
+	       4) LNTST for line test then
+	       5) RTS  Reset line.
+	       6) QUIT about four or five times, back to the >
+
+--------------------------------------------------------------------------------
+                                                                      
+GTD5EXAM        Examine number                                     
+               EXAM DN XXX-XXXX NZO
+                If switch shows "VN"--Vacant Number.
+                If switch shows "IC"--Intercept.
+
+GTD5HUNT        Examine Hunt Group All                           
+               EXAM HGRP XXXX ALL
+                
+GTD5EXAM     	Examine Line Equipment
+	       EXAM EN.TCU000.000.00.00.0  (LNI can be TCU,RSU,RLU or MXU)
+
+GTD5START       Begin Recent Change                               
+               2) CONTROL B
+               3) BEGI SRVC - CONTROL C
+		*** NOTE *** BEFORE ANY TRANS = CNTRL B//INSTEAD OF ENTER = CNTRL C	
+
+GTD5STOP        End Recent Change Session                   
+               END SESS  
+
+GTD5TC          Add Touch Call                               
+               CHAN DN XXX-XXXX SPTC
+
+GTD5DP          Remove Touch Call                            
+               CHAN DN XXX-XXXX SPTD
+           
+GTD5CW          Add Call Waiting                            
+               CHAN DN XXX-XXXX CWT.NCOD FLAS
+             
+                Remove Call Waiting                       
+               CHAN DN XXX-XXXX NCWT 
+             
+GTD5CCW         Add Cancel to Call Waiting                  
+               CHAN DN XXX-XXXX CWT.CODE
+            
+                Add Call Waiting & Cancel Call Waiting                   
+               CHAN DN XXX-XXXX CWT.CODE FLAS
+               
+             
+                Remove Cancel C.W. only                    
+               CHAN DN XXX-XXXX CWT.NCOD
+             
+                Remove CWT & Cancel CWT with No Other Features on line                    
+               CHAN DN XXX-XXXX NCWT NONH
+               
+                Remove CWT & Cancel Call Waiting with Other Features on line
+               CHAN DN XXX-XXXX NCWT
+
+GTD5CWID         Add Call Waiting ID 
+		CHAN DN XXX-XXXX CWID
+               
+                 Remove Call Waiting ID 
+                 CHAN DN XXX-XXXX CWT
+
+GTD5SC8V         Add Speed Call 8 Variable                    
+                CHAN DN XXX-XXXX SC8V
+
+                 Exam Speed Call 8 Lists
+                EXAM CCF DN XXX-XXXX
+
+                 To add Number to Speed Call 8 List in Switch
+                SET CCF DN XXX-XXXX DSC8.C?=YYYYYYY   (C? = C1 THRU C8)
+                            main #           sc8 #    location on list
+         
+         NOTE: keep in mind! C1-C8 is actually 2-9 on customers phone
+
+                Remove Speed Call 8 Variable                         
+               CHAN DN XXX-XXXX NS8V
+
+GTD5SC8F         Add Speed Call 8 Fixed                      
+               CHAN DN XXX-XXXX SC8F
+
+                 Exam Speed Call 8 Lists
+                EXAM CCF DN XXX-XXXX
+
+                 To add Number to Speed Call 8 List in Switch
+                SET CCF DN XXX-XXXX DSC8.C?=YYYYYYY   (C? = C1 THRU C8)
+                            main #           sc8 #    location on list
+         
+         NOTE: keep in mind! C1-C8 is actually 2-9 on customers phone
+
+                Remove Speed Call 8 Fixed                         
+               CHAN DN XXX-XXXX NS8F
+
+GTD5SC30V       Add Speed Call 30 Variable                    
+               CHAN DN XXX-XXXX SC3V
+
+                Exam Speed Call 30 Lists
+                EXAM CCF DN XXX-XXXX
+
+                To add Number to Speed Call 30 List in Switch
+                SET CCF DN XXX-XXXX DSC3.C??=YYYYYYY   (C? = C1 THRU C30)
+                            main #            sc30 #    location on list
+         
+         NOTE: keep in mind! C1-C30 is actually 20-49 on customers phone
+
+
+                Remove Speed Call 30 Variable                      
+               CHAN DN XXX-XXXX NS3V
+
+GTD5SC30F       Add Speed Call 30 Fixed                       
+               CHAN DN XXX-XXXX SC3F
+ 
+                Exam Speed Call 30 Lists
+                EXAM CCF DN XXX-XXXX
+ 
+                To add Number to Speed Call 30 List in Switch
+                SET CCF DN XXX-XXXX DSC3.C??=YYYYYYY   (C? = C1 THRU C30)
+                            main #            sc30 #    location on list
+         
+         NOTE: keep in mind! C1-C30 is actually 20-49 on customers phone
+
+                Remove Speed Call 30 Fixed                      
+               CHAN DN XXX-XXXX NS3F
+
+GTD53WC         Add Three-Way-Calling                        
+               CHAN DN XXX-XXXX TWC FLAS FAR07 NATW
+          
+                Remove Three Way Calling with Other Features on line
+               CHAN DN XXX-XXXX NTWC
+      
+GTD5BNR         Add Busy Number Redial
+               CHAN DN XXX-XXXX ACBB
+               
+                Removed Busy Number Redial
+               CHAN DN XXX-XXXX NCBD
+
+GTD5CB 	        Add Call Block                                
+	       CHAN DN XXX-XXXX SCRI
+	    
+	        To Exam Call Block list
+	       EXAM SCCF DN XXX-XXXX 
+	    
+	        Activation Status
+	       SCAS=SCRI/DEAC  (SCRI = active , DEAC = not active)
+	    
+                Adding/Deleting Number From Call Block List
+       Adding: SET SCCF DN XXX-XXXX LSCR=AENT SRDI.I?=NPANXXXXXX SCAS=SCRI     
+     Deleting: SET SCCF DN XXX-XXXX LSCR=DENT SRDI.I?
+               
+    NOTE: I? = Position on List (I1 thru I12) list can have a limit of 12 #'s
+	                 
+	        Remove Call Block
+	       CHAN DN XXX-XXXX NSCR
+
+         
+GTD5HUNT        Add Call Block to Hunt Group (2 Steps)        
+               1) CHAN 000-0000 SCRI (Maintance Number)
+               2) CHAN XXX-XXXX SCRI (do this step for each member)
+               
+                Remove Call Block from Hunt Group (2 Steps)
+               1) CHAN DN 000-0000 NSCR (Maintance Number)
+               2) CHAN DN XXX-XXXX NSCR (do this step for each member)
+	       
+	        Add Call Block to a Centranet Hunt Group (2 Steps)                 
+	       1) CHAN HGRP???? SCRG    (Header)
+	       2) CHAN DN 000-0000 CDGG (Maintance Number)
+	       
+	        Remove Call Block from Centranet Hunt Group
+	       1) CHAN HGRP???? NSCR    (Header)
+	       2) CHAN DN 000-0000 NCGG (Maintance Number)
+
+GTD5ACR         Add Auto Call Return
+	       CHAN DN XXX-XXXX ARCB (RND)
+	        "RND" is only needed in some switch or if Auto Call Return is
+	        not working try adding it to Switch.
+
+                Add Auto Call Return in EBB Area's /c ccnd-call
+               CHAN DN XXX-XXXX ARCB FAR01
+
+                Add Auto Call Return in EBB Area's /c ccnd-line
+               CHAN DN XXX-XXXX ARCB FAR00
+	    
+	        To Exam Auto Call Return in Switch 
+	       EXAM CCF DN XXX-XXXX
+	    
+	        Activation Status
+	       ACRA=ACTI/DEAC  (ACTI = active , DEAC = not active)  
+	    
+	        Remove Auto Call Return
+	       CHAN DN XXX-XXXX NARC
+
+GTD5HUNT        Add Auto Call Return to Hunt Group (3 Steps)
+               1) CHAN HGRP???? ARCB    (Add to Header)
+               2) CHAN DN 000-0000 FLAS (Maintance Number)
+               3) CHAN DN XXX-XXXX FLAS (do this step for each Member)
+               
+                Remove Auto Call Return from Hunt Group
+               1) CHAN HGRP???? NARC    (Delete from header)
+               2) CHAN DN 000-0000 NONH (Maintance Number)
+               3) CHAN DN XXX-XXXX NONH (do this step for each Member)
+               
+          
+GTD5ABR	        Add Auto Busy Redial
+	       CHAN DN XXX-XXXX ACBD ACBB RND
+
+                Add Auto Busy Redial monthly svc in EBB Area's /c ccnd-call
+               CHAN DN XXX-XXXX ACBD ACBB RND FAR01
+
+                Add Auto Busy Redial monthly svc in EBB Area's /c ccnd-line
+               CHAN DN XXX-XXXX ACBD ACBB RND FAR00
+
+	        Remove Auto busy Redial
+	       CHAN DN XXX-XXXX NACB NCBD NRND
+
+GTD5HUNT        Add Auto Busy Redial to Hunt Group (3 Steps)
+               1) CHAN HGRP???? ACBB ACBD  (Add to Header)
+               2) CHAN DN 000-0000 FLAS    (Maintance Number)
+               3) CHAN DN XXX-XXXX FLAS    (do this step for each Member)
+               
+                Remove Auto Busy Redial from Hunt Group
+               1) CHAN HGRP???? NACB NCBD  (Delete from header)
+               2) CHAN DN 000-0000 NONH    (Maintance Number)
+               3) CHAN DN XXX-XXXX NONH    (do this step for each Member)
+               
+         
+GTD5VIP         Add VIP Alert
+               CHAN DN XXX-XXXX DRCW
+               
+                To Exam VIP Alert list
+	       EXAM SCCF DN XXX-XXXX (ALL)  "ALL" is optional
+	    
+	        Activation Status
+	       DRA=ACTI/DEAC  (ACTI = active , DEAC = not active) 
+	    
+                Adding/Deleting Number From Vip Alert List
+       Adding: SET SCCF DN XXX-XXXX LDRC=AENT DRDI.I?=NPANXXXXXX DRA=ACTI
+     Deleting: SET SCCF DN XXX-XXXX LDRC=DENT DRDI.I?
+             
+    NOTE: I? = Position on List (I1 thru I12) list can have a limit of 12 #'s
+
+                Remove VIP Alert
+               CHAN DN XXX-XXXX NDRC
+
+GTD5HUNT        Add Vip Alert to Hunt Group (3 Steps)
+               1) CHAN HGRP???? DRCW CWT
+               2) CHAN DN 000-0000 DRCW CWT
+               3) CHAN DN XXX-XXXX DRCW CWT
+               
+                Remove VIP Alert from Hunt Group
+               1) CHAN HGRP???? NDRC NCWT
+               2) CHAN DN 000-0000 NDRC NCWT
+               3) CHAN DN XXX-XXXX NDRC NCWT
+               
+GTD5SPLCW       Add Special Call Waiting (Line can't have CW & this feature)
+               CHAN DN XXX-XXXX SECW
+               
+                To Exam Special Call Waiting list
+	       EXAM SCCF DN XXX-XXXX (ALL)  "ALL" is optional
+	    
+	        Activation Status
+	       SCWA=CWTA/NCWA  (CWTA = active , NCWA = not active)
+	    
+                Adding/Deleting Number From Special Call Waiting List
+       Adding: SET SCCF DN XXX-XXXX LSCW=AENT SWDI.I?=NPANXXXXXX SCWA=CWTA
+     Deleting: SET SCCF DN XXX-XXXX LSCW=DENT SWDI.I?
+               
+    NOTE: I? = Position on List (I1 thru I12) list can have a limit of 12 #'s
+               
+                Remove Special Call Waiting
+               CHAN DN XXX-XXXX NSCW
+
+         
+GTD5HUNT        Add Special Call Waiting to Hunt Group (2 Steps)
+               1) CHAN DN 000-0000 SECW (Maintance Number)
+               2) CHAN DN XXX-XXXX SECW (do this step for each member)
+
+                Remove Special Call Waiting from Hunt Group (2 Steps)
+               1) CHAN DN 000-0000 NSCW (Maintance Number)
+               2) CHAN DN XXX-XXXX NSCW (do this step for each member)
+
+GTD5SPLCF       Add Special Call Forwarding
+               CHAN DN XXX-XXXX DSVI
+               
+                Set # for Calls to Foward to
+                SET SCCF DN XXX-XXXX DSAV=XXXXXXX
+                
+                To Exam Special Call Forwarding list
+	       EXAM SCCF DN XXX-XXXX (ALL)  "ALL" is optional
+	    
+	        Activation Status
+	       CDS=ACTS/DEAC  (ACTS = active , DEAC = not active)
+	    
+                Adding/Deleting Number From Special Call Forwarding List
+       Adding: SET SCCF DN XXX-XXXX LCDS=AENT SADI.I?=NPANXXXXXX CDS=ACTS 
+     Deleting: SET SCCF DN XXX-XXXX LCDS=DENT SADI.I?
+               
+    NOTE: I? = Position on List (I1 thru I12) list can have a limit of 12 #'s
+               
+                Remove Special Call Forwarding
+               CHAN DN XXX-XXXX NSVI     
+
+GTD5HUNT        Add Special Call Forwarding to Hunt Group
+               1) CHAN DN 000-0000 DSVI (Maintance Number)
+               2) CHAN DN XXX-XXXX DSVI (do this step for each member)
+
+                Remove Special Call Forwarding from Hunt Group (2 Steps)
+               1) CHAN DN 000-0000 NSVI (Maintance Number)
+               2) CHAN DN XXX-XXXX NSVI (do this step for each member)
+               
+                Add Special Call Forwarding to a Centranet Hunt Group (2 Steps)                 
+	       1) CHAN HGRP???? DSVG.REM1 (Header)
+	       2) CHAN DN 000-0000 CDGG   (Maintance Number)
+	       
+	        Remove Special Call Forwarding from Centranet Hunt Group
+	       1) CHAN HGRP???? NSVG    (Header)
+	       2) CHAN DN 000-0000 NCGG (Maintance Number)
+               
+GTD5SPLCA       Add Special Call Acceptance
+               CHAN DN XXX-XXXX SCAI
+
+                To Exam Special Call Acceptance list
+	       EXAM SCCF DN XXX-XXXX (ALL)  "ALL" is optional
+	    
+	        Activation Status
+	       SCAR=SCAI/DEAC  (SCAI = active , DEAC = not active)
+	    
+                Adding/Deleting Number From Special Call Acceptance List
+       Adding: SET SCCF DN XXX-XXXX LSCA=AENT SCDI.I?=NPANXXXXXX SCAR=SCAI
+     Deleting: SET SCCF DN XXX-XXXX LSCA=DENT SCDI.I?
+               
+    NOTE: I? = Position on List (I1 thru I12) list can have a limit of 12 #'s
+               
+                Remove Special Call Acceptance
+               CHAN DN XXX-XXXX NSCA
+
+GTD5HUNT        Add Special Call Acceptance to Hunt Group
+               1) CHAN DN 000-0000 SCAI (Maintance Number)
+               2) CHAN DN XXX-XXXX SCAI (do this step for each member)
+
+                Remove Special Call Acceptance from Hunt Group (2 Steps)
+               1) CHAN DN 000-0000 NSCA (Maintance Number)
+               2) CHAN DN XXX-XXXX NSCA (do this step for each member)
+
+                Add Special Call Acceptance to a Centranet Hunt Group                
+	       1) CHAN HGRP???? SCAG    (Header)
+	       2) CHAN DN 000-0000 CDGG (Maintance Number)
+	      
+	        Remove Special Call Acceptance from Centranet Hunt Group
+	       1) CHAN HGRP???? NSCA    (Header)
+	       2) CHAN DN 000-0000 NCGG (Maintance Number)
+
+
+GTD5SR          Add Smart-Ring                                   
+               CHAN DN XXX-XXXX DRDN=XXX-XXXX DRG1
+             
+                Remove Smart-Ring                           
+               CHAN DN XXX-XXXX NDRD NDRG
+
+GTD5CNNDSEI        Add Caller Number I.D. & Calling Name Delivery (CLND)
+               CHAN DN XXX-XXXX CNDE CLND 
+               
+                Remove Caller Number I.D. & Calling Name Delivery
+               CHAN DN XXX-XXXX NCAN NNAD
+		
+		**** NOTE **** IF ON LOADED CBL..CHECK FOR MISMATCH***	
+		ACCE DN XXX-XXXX CNVT
+		**** IF MISMATCHED DO.....
+		CHAN DN XXX-XXXX NONL.....THIS IS TO MAKE NON-LOADED	
+		CHAN DN XXX-XXXX LOAD.....THIS IS TO MAKE LOADED
+		
+          
+GTD5CCNDC       Add Cancel Calling Number Delivery per Call        
+               CHAN DN XXX-XXXX FAR??   
+                
+                Remove Cancel Calling Number Delivery per Call                      
+               CHAN DN XXX-XXXX FAR??   
+                
+GTD5CCNDL       Add Cancel Calling Number Delivery per Line        
+               CHAN DN XXX-XXXX FLAS CNDB FAR04 RND 
+        
+                Remove Cancel Calling Number Delivery per Line                      
+               CHAN DN XXX-XXXX NCND FAR??  
+
+GTD5HUNT        Add Cancel Calling Number Delivery per Line to Hunt Group        
+               CHAN HGRP???? CNDB FARXX  
+        
+                Remove Cancel Calling Number Delivery per Line from Hunt Group                      
+               CHAN HGRP???? NCNB FAR?? 
+               
+GTD5ACRJ        Add Anonymous Call Rejection 
+	       CHAN DN XXX-XXXX UCRI 
+
+	        To Exam to see if Anonymous Call Rejection is active
+	       EXAM SCCF DN XXX-XXXX 
+	       
+	       Remove Anonymous Call Rejection
+               CHAN DN XXX-XXXX NUCI
+
+GTD5CT	        Add Call Trace 
+	       CHAN DN XXX-XXXX FLAS FAR13 NATW COTR
+	       
+	        To Exam Call Tracing Service in Switch
+	       EXAM CCF DN XXX-XXXX 
+	       
+	        Activation Status 
+	       COTA=ACTI/DEAC  (ACTI = active , DEAC = not active)
+	       
+	        Remove Call Trace
+               CHAN DN XXX-XXXX NCOT
+
+GTD5HUNT        Add Call Tracing Service to Hunt Group (3 Steps)
+               1) CHAN HGRP???? COTR
+               2) CHAN DN 000-0000 COTR
+               3) CHAN DN XXX-XXXX COTR
+               
+                Remove Call Tracing Service from Hunt Group
+               1) CHAN HGRP???? NCOT
+               2) CHAN DN 000-0000 NCOT
+               3) CHAN DN XXX-XXXX NCOT
+
+GTD5LOCK        Puts Line OOS in Switch (Hunt Group Lines & Coin Lines mostly)
+               PUT DN XXX-XXXX OOS
+                      -or-
+               FORCE OOS DN XXX-XXXX
+                      
+                Puts Line Back in Service
+               FORCE INS DN XXX-XXXX
+             
+GTD5PIC         Change PIC--L.D. Carrier (Interlata-EPIC-PRE)(GTE = 5483)                      
+               CHAN DN XXX-XXXX CID ???
+               
+                Change PIC--L.D. where 4 digit carrier is required
+               CHAN DN XXX-XXXX CID 0???
+                
+                Change PIC--L.D. Carrier (Intralata-APIC-PRA)(GTE = 5448)                      
+               CHAN DN XXX-XXXX ICID ???
+               
+       Note: The Intra-Lata pic should not be in switch if customer wants GTE
+             to continue billing them for those calls. putting "5483 or 5448"
+             in switch will block cust from calling out long distance 
+   
+GTD5HUNT        Change PIC--L.D. Carrier                       
+               1) CHAN HGRP XXXX CID ???  (for hunt group header)
+               2) CHAN DN 000-0000 CID ???  (for maintance #)
+               3) CHAN DN XXX-XXXX CID ???  (for each member in hunt group)
+                 all lines in hunt can have different L.D. carriers
+
+GTD5ECPBLK	 To add Extended Calling Plan Block
+		CHAN DN XXX-XXXX DCXR RND SSOUXX    --- SEE BELOW FOR XX VALUES
+		
+		ECPBLK ALONE   =  SSOU72
+		ECPBLK + CR1   =  SSOU69
+		ECPBLK + CR2   =  SSOU70
+		ECPBLK + CR3   =  SSOU71
+
+
+GTD5DCPBLK	To Add Directory Connect Plus Block	
+		CHAN DN XXX-XXXX INFO5
+		
+		--- NOTE --- CHECK W/DBAC TO MAKE SURE SCREEN CODE IN 36
+
+GTD5TD          Temp Disconect Line                           
+               CHAN DN XXX-XXXX TPD
+             
+                Treatment will sometimes use "DO" which denies outgoing calls
+               CHAN DN XXX-XXXX TPD DO
+             
+GTD5RCO         Remove Temp Disconnect                           
+               CHAN DN XXX-XXXX NTPD
+               
+                If Treatment Disconnected using "DO"
+               CHAN DN XXX-XXXX NTPD NDO
+
+GTD5VSR         Add Vacation Service to Line
+               CHAN DN XXX-XXXX TPD
+               
+                Delete Vacation Service from Line
+               CHAN DN XXX-XXXX NTPD 
+
+GTD5SWAP        Change Number                                        
+               CHAN DN XXX-XXXX TO XXX-XXXX 
+                        old #       new #
+             
+                Change line equip. to new one                         
+               CHAN EN.TCU000.0.00.00.0 TO.TCU000.0.00.00.0
+                          old lni             new lni
+
+GTD5REV         Add revert call
+               CHAN DN XXX-XXXX REV
+               
+                Rmv revert call
+                CHAN DN XXX-XXXX NREV         
+
+GTD5ECF		Add ECF Trigger - Real Service
+		CHAN DN XXX-XXXX TDP
+		SET TDP DN XXX-XXXX VOIC.TMAT.12.ACTV
+		
+		Remove ECF Trigger - Real Service
+		CHAN DN XXX-XXXX NTDP
+		
+		Add ECF TRIGGER - Virtual Service
+		SET TRDP DN XXX-XXXX VOIC.DIGA.12.ACTV
+		
+		Remove ECF Trigger - Virtual Service
+		CLEA TRDP DN XXX-XXXX
+		
+		
+GTD5CFV         Add Call Forwarding Variable                         
+               CHAN DN XXX-XXXX DAVI.ACTI.REM1
+          
+                Exam Call Forwarding Variable
+               EXAM CCF DN XXX-XXXX
+            
+                To activate Call Forwarding Variable                     
+               SET CCF DN XXX-XXXX CDA=ACTV DDAV=XXXXXXX
+                           main #             fwd to #
+                           
+                To Deactivate Call Forwarding Variable
+               SET CCF DN XXX-XXXX CDA=DEAC
+          
+	        Remove Call Forwarding Variable                        
+               CHAN DN XXX-XXXX NAVI
+
+GTD5HUNT        Add Call Forwarding Variable to Hunt group (2 steps)  
+               1) CHAN HGRPXXXX DAVG     (Added to Hunt Group Header)
+               2) CHAN DN 000-0000 CDGG  (Added to Maintance Number)
+	
+                Exam Call Forwarding Variable Hunt Group
+               EXAM CCF HGRPXXX 
+              
+                To activate Call Forwarding Variable                     
+               SET CCF HGRPXXXX GCDA=ACTV DGDV=XXXXXXX
+                        hgrp #              fwd to #
+                           
+                To Deactivate Call Forwarding Variable
+               SET CCF HGRP XXXX GCDA=DEAC
+          
+	        Remove Call Forwarding Variable                        
+               1) CHAN HGRP XXXX NAVG
+               2) CHAN DN 000-0000 NCGG
+               
+GTD5CFF         Add Call Forwarding Fixed                           
+               CHAN DN XXX-XXXX DAFI
+          
+                Exam Call Forwarding Fixed
+               EXAM CCF DN XXX-XXXX
+                
+                To activate Call Forwarding Fixed                     
+               SET CCF DN XXX-XXXX CDA=ACTF DDAF=XXXXXXX
+                           main #             fwd to #
+                           
+                To Deactivate Call Forwarding Fixed
+               SET CCF DN XXX-XXXX CDA=DEAC
+          
+	        Remove Call Forwarding Fixed                        
+               CHAN DN XXX-XXXX NAFI
+
+GTD5HUNT        Add Call Forwarding Fixed to Hunt group (2 steps)     
+               1) CHAN HGRPXXXX DAFG     (Added to Hunt Group Header)
+               2) CHAN DN 000-0000 CDGG  (Added to Maintance Number)
+	
+                Exam Call Forwarding Fixed Hunt Group
+               EXAM CCF HGRPXXX 
+              
+                To activate Call Forwarding Fixed                     
+               SET CCF HGRPXXXX GCDA=ACTF DGDF=XXXXXXX
+                        hgrp #              fwd to #
+                           
+                To Deactivate Call Forwarding Fixed
+               SET CCF HGRP XXXX GCDA=DEAC
+          
+	        Remove Call Forwarding Fixed                        
+               1) CHAN HGRP XXXX NAFG
+               2) CHAN DN 000-0000 NCGG
+
+GTD5CFBV        Add Call Forwarding Busy Variable
+               CHAN DN XXX-XXXX DBVI.ACTI.REM001
+               
+                Exam Call Forwarding Busy Variable
+               EXAM CCF DN XXX-XXXX
+               
+                To Activate Call Forwarding Busy Variable
+               SET CCF DN XXX-XXXX BYA=ACTV DBYV=XXXXXXX
+                           main #             fwd to #
+                           
+                To Deactivate Call Forwarding Busy Variable
+               SET CCF DN XXX-XXXX BYA=DEAC
+               
+                Remove Call Forwarding Busy Variable
+               CHAN DN XXX-XXXX NBVI
+               
+GTD5CFBF        Add Call Forwarding Busy Fixed
+               CHAN DN XXX-XXXX DBFI.ACTI.REM001
+               
+                Exam Call Forwarding Busy Fixed
+               EXAM CCF DN XXX-XXXX
+               
+                To Activate Call Forwarding Busy Fixed
+               SET CCF DN XXX-XXXX BYA=ACTF DBYF=XXXXXXX
+                           main #             fwd to #
+                           
+                To Deactivate Call Forwarding Busy Fixed
+               SET CCF DN XXX-XXXX BYA=DEAC
+               
+                Remove Call Forwarding Busy Fixed
+               CHAN DN XXX-XXXX NBFI
+
+GTD5HUNT        Add Call Forwarding Busy Fixed to Hunt Group
+               1) CHAN HGRP???? DBFG.ACTI.REM001
+               2) CHAN DN 0??-???? CDGG
+               
+                Exam Call Forwarding Busy Fixed (Hunt Group)
+               EXAM CCF HGRP????
+               
+                To Activate Call Forwarding Busy Fixed (Hunt Group)
+               SET CCF HGRP???? GBYA=ACTF DBGF=XXXXXXX
+                       Hnt Grp #              fwd to #
+                           
+                To Deactivate Call Forwarding Busy Fixed (Hunt Group)
+               SET CCF HGRP???? GBYA=DEAC
+               
+                Remove Call Forwarding Busy Fixed (Hunt Group)
+               CHAN DN XXX-XXXX NBFG
+
+GTD5CFNV        Add Call Forwarding No Answer Variable
+               CHAN DN XXX-XXXX DNVI.ACTI.REM001.NAT20
+               
+                Exam Call Forwarding No Answer Variable
+               EXAM CCF DN XXX-XXXX
+               
+                To Activate Call Forwarding No Answer Variable
+               SET CCF DN XXX-XXXX NAA=ACTV DANV=XXXXXXX
+                           main #             fwd to #
+                           
+                To Deactivate Call Forwarding No Answer Variable
+               SET CCF DN XXX-XXXX NAA=DEAC
+               
+                Remove Call Forwarding No Answer Variable
+               CHAN DN XXX-XXXX NNVI
+               
+GTD5CFNF        Add Call Forwarding No Answer Fixed
+               CHAN DN XXX-XXXX DNFI.ACTI.REM001.NAT20
+               
+                Exam Call Forwarding No Answer Fixed
+               EXAM CCF DN XXX-XXXX
+               
+                To Activate Call Forwarding No Answer Fixed
+               SET CCF DN XXX-XXXX NAA=ACTF DANF=XXXXXXX
+                           main #             fwd to #
+                           
+                To Deactivate Call Forwarding No Answer Fixed
+               SET CCF DN XXX-XXXX NAA=DEAC
+               
+                Remove Call Forwarding No Answer Fixed
+               CHAN DN XXX-XXXX NNFI
+
+GTD5CFBNV       Add Call Forwarding Busy/No Answer Variable
+               CHAN DN XXX-XXXX DBVI.ACTI.REM001 DNVI.ACTI.REM001.NAT20
+               
+                Exam Call Forwarding Busy/No Answer Variable
+               EXAM CCF DN XXX-XXXX
+               
+                To Activate Call Forwarding Busy/No Answer Variable
+               SET CCF DN XXX-XXXX BYA=ACTV DBYV=XXXXXXX NAA=ACTV DANV=XXXXXXX
+                           main #             fwd to #              fwd to #
+                           
+                To Deactivate Call Forwarding Busy/No Answer Variable
+               SET CCF DN XXX-XXXX NAA=DEAC BYA=DEAC
+               
+                Remove Call Forwarding Busy/No Answer Variable
+               CHAN DN XXX-XXXX NBVI NNVI
+               
+GTD5CFBNF       Add Call Forwarding Busy/No Answer Fixed
+               CHAN DN XXX-XXXX DBFI.ACTI.REM003 DNFI.ACTI.REM003.NAT20
+               
+                Exam Call Forwarding Busy/No Answer Fixed
+               EXAM CCF DN XXX-XXXX
+               
+                To Activate Call Forwarding Busy/No Answer Fixed
+               SET CCF DN XXX-XXXX BYA=ACTF DBYF=XXXXXXX NAA=ACTF DANF=XXXXXXX
+                           main #             fwd to #              fwd to #
+                           
+                To Deactivate Call Forwarding Busy/No Answer Fixed
+               SET CCF DN XXX-XXXX NAA=DEAC BYA=DEAC
+               
+                Remove Call Forwarding Busy/No Answer Fixed
+               CHAN DN XXX-XXXX NBFI NNFI
+
+GTD5HUNT        Add Call Forwarding Busy/No Answ Fixed to Header of Hunt Group
+               1) CHAN HGRP???? DBFG.ACTI.REM003 CFNG
+               2) SET CCF HGRP???? GBYA=ACTF DBGF=xxxxxxx
+                          Hnt Grp #              fwd to #
+               
+                Add CFng Busy/No Answ Fixed to Maint #'s & Members of Hnt Grp
+               1) CHAN DN 0??-???? DNFI.ACTI.REM003 ONGD
+               2) SET CCF DN 0??-???? NAA=ACTF DANF=xxxxxxx
+               3) CHAN DN NXX-XXXX DNFI.ACTI.REM003 ONGD
+               4) SET CCF DN NXX-XXXX NAA=ACTF DANF=xxxxxxx
+               5) Repeat steps 3 & 4 for each additional member in Hnt Grp
+                
+                Exam Call Forwarding Busy/No Answ Fixed (Hunt Group)
+               EXAM CCF HGRP????
+               EXAM CCF DN 0??-???? or CHAN CCF DN NXX-XXXX
+               
+                To Deactivate Call Forwarding Busy/No Answ Fixed (Hunt Group)
+               SET CCF HGRP???? GBYA=DEAC
+               SET CCF DN 0??-???? NAA=DEAC or SET CCF DN NXX-XXXX NAA=DEAC
+               
+                Remove Call Forwarding Busy/No Answ Fixed to Header of Hnt Grp
+               1) CHAN HGRP???? NBFG
+
+                Remove CFng Busy/No Answ Fxd to Maint #'s & Members of Hnt Grp
+               1) CHAN DN 0??-???? NNFI ONCN (Maint # only)
+               2) CHAN DN NXX-XXXX NNFI ONCN (Member's only)
+               3) Repeat step 2 for each additional member in Hnt Grp
+               
+GTD5RCF         Add Remote Call Forwarding after Installing Line
+               CHAN DN XXX-XXXX DAFI.NACT.RCF001
+               
+                Set Remote Call Forwarding 
+               SET CCF DN XXX-XXXX CDA=ACTF DDAF=YYYYYYY
+                           main #     fwd to #
+                           
+                Remove Remote Call Forwarding
+               CHAN DN XXX-XXXX NAFI
+               
+     **** TO BUILD RCF FROM SCRATCH IN SWITCH ***** 
+     ADD DN XXX-XXXX PSEU TDS1 CSOU1 CSNK1 SSOU1 SSNK1 RSOU1 CDOU1 TSOU1 CIDXXXX
+     STOR ONCN CGR FAR0 PERM1 ROP TDO0 INFO1 ICIDXXXX DAFI.ACTI.RCF001
+     FDAA SMPO NSPT TR JIPI03
+
+
+GTD5VMS	 Add Persec
+	1) CHAN DN XXX-XXXX DBFI.NACT.REM3 DNFI.NACT.REM3.NAT20 MWIA
+        
+        2) SET CCF DN XXX-XXXX DBYF=YYYYYYY DANF=YYYYYYY  
+                       main #  PS access #   PS access #
+
+	 Add Persec with Ringing Options (ARB & CCR)
+	1) CHAN DN XXX-XXXX DBFI.NACT.REM3 DNFI.NACT.REM3.VNAT14 MWIA.PRA1
+            Cust Controlled Ringing = VNAT14 (NAT value varies per # of rings) 
+            Audible Ring Burst      = MWIA.PRA1  
+                                               PRA1     EVERY 15 MIN'S
+                                               PRA2     EVERY 30 MIN'S
+                                               PRA3     EVERY 45 MIN'S
+                                               PRA4     EVERY HOUR
+                                               
+              A) SET CCF DN XXX-XXXX MWIA=ACTI  < ON >
+              B) SET CCF DN XXX-XXXX MWIA=DEAC  < OFF >     
+      NOTE: To Add MWi Light = CHAN DN XXX-XXXX MWIB (FOR BOTH AUD & VISUAL)
+    						MWIV (FOR VISUAL ONLY)
+    						  		  
+      NOTE: Cust Controlled Ringing (58#) followed by 1-9 for Number of Rings
+	   
+	2) SET CCF DN XXX-XXXX DBYF=YYYYYYY DANF=YYYYYYY  
+                       main #  PS access #   PS access #
+         
+         To Change # of Rings B4 "calls" Forward
+        CHAN DN XXX-XXXX DNFI.NACT.REM001.NAT??    (?? = 20 = 4 RINGS)
+                                                         5  = 1 RING
+                                                             
+         To Change # of Calls Forwarded to another Number
+        CHAN DN XXX-XXXX DNFI.NACT.REM00?  (? = 3 for 3 Calls is standard)
+         
+         Exam Call Forwarding for Persec
+        EXAM CCF DN XXX-XXXX
+           DBYF=YYYYYYY = Call Forwarding Busy
+           DANF=YYYYYYY = Call Forwarding No Answer
+           MWIA=ACTV    = Stutter Dial Tone Active
+           MWIA=DEAC    = Stutter Dial Tone Not Active                   
+	                    
+         Remove Persec
+	CHAN DN XXX-XXXX NBFI NNFI NMWI
+	 
+GTD5NEW   1) Initialize new line with Touch Call (SPTC)                                  
+          ADD DN XXX-XXXX LINE.TCU000.0.00.00.0 FAR31 ATWC S1 SPTC RING.MFR.1.R 
+          CIDXXXX ICIDXXXX NONL FLAS 
+         
+          
+
+GTD5HUNT   New Hunt Group Svc (Example from Coldwater,MI '517-279')  
+
+          1) ADD HGRP??? SIZE? MLHC S7 FAR1 SEQ MJAT015 MNAT010 ALT0.001 
+             RSNK69 ICRA CSNK004 BN NPA-NXX-XXXX LATA=348 DGN
+
+          2) ADD DN 279-1527 HGRP??? (Hunt Group Number)
+
+          3) ADD DN 015-0446 LINE.TCU3.0.4.7.1 MLHC S7 HGM???.1 CID0333 
+             RING.MFR.1.R FAR1 LOAD NALN DGN
+
+          4) ADD DN 279-1528 LINE.TCU3.2.14.0.0 MLHC S7 HGM???.2 CID0333 
+             RING.MFR.1.R FAR1 LOAD NALN DGN
+          
+GTD5DEL    Delete customer from switch               
+          DELE DN XXX-XXXX DL VN
+          
+           Delete Line & put on EDT in Switch
+          ADD DN NXX-XXXX LINE.TCU000.0.00.00.0 SPTC S?? FAR1 (Far Optional)
+          
+GTD5OPIN    Put Number on Intercept                             
+           CHAN DN XXX-XXXX IC  (Disconnect Recording)
+
+         2) This one is used for referral numbers within it's own exchange
+	   CHAN DN XXX-XXXX CN  (Number Change Recording)
+
+     
+         3) To remove Operator Intercept
+           CHAN DN XXX-XXXX VN  (Vacant Number Recording)
+
+GTD5EBB         To Allow ACR & ABR Event Based Billing /c ccnd-line <-* ALERT *
+               CHAN DN XXX-XXXX NARC NACB NCBD NRND FAR12
+               
+                To Block ACR & ABR Event Based Billing /c ccnd-line <-* ALERT *
+               CHAN DN XXX-XXXX NARC NACB NCBD NRND FAR00
+		
+		To Block TWC Event Based Billing/ c ccnd-line
+		CHAN DN XXX-XXXX NATW
+
+GTD5FAR                
+      -------------------------------------------------------------------
+      | Far |  3 Way  | Auto Bsy | Auto Cll | Call     | Callng # | Pty |
+      |  ?? | Calling | Redial   | Return   | Trace    | Dlvry Bk | Lns |
+      -------------------------------------------------------------------
+      |   0 | Per Mth | Per Mth  | Per Mth  | Per Mth  | Per Line | Yes |
+      |   1 | Per Mth | Per Mth  | Per Mth  | Per Mth  | Per Call |     |
+      |   2 | Per Mth | Per Mth  | Per Mth  | Per Use  | Per Line |     |
+      |   3 | Per Mth | Per Mth  | Per Mth  | Per Use  | Per Call |     |
+      |   4 | Per Mth | Per Mth  | Per Use  | Per Mth  | Per Line |     |
+      |   5 | Per Mth | Per Mth  | Per Use  | Per Mth  | Per Call |     |
+      |   6 | Per Mth | Per Mth  | Per Use  | Per Use  | Per Line |     |
+      |   7 | Per Mth | Per Mth  | Per Use  | Per Use  | Per Call |     |
+      |   8 | Per Mth | Per Use  | Per Mth  | Per Mth  | Per Line |     |
+      |   9 | Per Mth | Per Use  | Per Mth  | Per Mth  | Per Call |     |
+      |  10 | Per Mth | Per Use  | Per Mth  | Per Use  | Per Line |     |
+      |  11 | Per Mth | Per Use  | Per Mth  | Per Use  | Per Call |     |
+      |  12 | Per Mth | Per Use  | Per Use  | Per Mth  | Per Line |     |
+      |  13 | Per Mth | Per Use  | Per Use  | Per Mth  | Per Call |     |
+      |  14 | Per Mth | Per Use  | Per Use  | Per Use  | Per Line |     |
+      |  15 | Per Mth | Per Use  | Per Use  | Per Use  | Per Call |     |
+      |  16 | Per Use | Per Mth  | Per Mth  | Per Mth  | Per Line |     |
+      |  17 | Per Use | Per Mth  | Per Mth  | Per Mth  | Per Call |     |
+      |  18 | Per Use | Per Mth  | Per Mth  | Per Use  | Per Line |     |
+      |  19 | Per Use | Per Mth  | Per Mth  | Per Use  | Per Call |     |
+      |  20 | Per Use | Per Mth  | Per Use  | Per Mth  | Per Line |     |
+      |  21 | Per Use | Per Mth  | Per Use  | Per Mth  | Per Call |     |
+      |  22 | Per Use | Per Mth  | Per Use  | Per Use  | Per Line |     |
+      |  23 | Per Use | Per Mth  | Per Use  | Per Use  | Per Call |     |
+      |  24 | Per Use | Per Use  | Per Mth  | Per Mth  | Per Line |     |
+      |  25 | Per Use | Per Use  | Per Mth  | Per Mth  | Per Call |     |
+      |  26 | Per Use | Per Use  | Per Mth  | Per Use  | Per Line |     |
+      |  27 | Per Use | Per Use  | Per Mth  | Per Use  | Per Call |     |
+      |  28 | Per Use | Per Use  | Per Use  | Per Mth  | Per Line |     |
+      |  29 | Per Use | Per Use  | Per Use  | Per Mth  | Per Call |     |
+      |  30 | Per Use | Per Use  | Per Use  | Per Use  | Per Line |     |
+      |  31 | Per Use | Per Use  | Per Use  | Per Use  | Per Call |     |
+      -------------------------------------------------------------------
+
+GTD5OVER	Force Line OOS
+		FORCE OOS DN XXX-XXXX
+		** DO THIS TWICE..THEN DO **
+		
+		DUMP STAT DN XXX-XXXX
+		** WHEN IT SAYS "IDLE"...DO **
+		
+		FORCE INS DN XXX-XXXX
+		** AND THEN THE DUMP STAT AGAIN **
+		
+GTD5TEST   (You do NOT need to start a Recent Change session to do these.)
+	   
+	        Test for DC Voltage                         
+               ACCE DN XXX-XXXX DCVT
+
+	        Test for Resistance (Short)                 
+               ACCE DN XXX-XXXX REST KILO
+          	
+          	Test for pulling Dial Tone
+               ACCE DN XXX-XXXX CTT
+          	
+          	Test for ringing and ring trip test
+               ACCE DN XXX-XXXX RART
+          	
+          	Test for supervisory and control test 
+               ACCE DN XXX-XXXX SACT
+--------------------------------------------------------------------------------
+SIEMENSSTART	To get a Start prompt
+		hit <enter> 
+		prompt will be <
+		
+SIEMENSEXAM	To Examine a #		
+		DISPSUB:DN=xxxxxxx;
+		
+		To Examine a Hunt Group
+		DISPMLHG:DN=xxxxxxx;
+		
+SIEMENSTC	Add Touch Call
+		EDITSUB:DN=xxxxxxx,LNATT=DTMF;
+		
+		Rmv Touch Call
+		EDITSUB:DN=xxxxxxx,CLNATT=DTMF;
+
+SIEMENSCWT	Add Call Waiting
+		EDITSUB:DN=xxxxxxx,COS=CW;
+		
+		Rmv Call Waiting
+		EDITSUB:DN=xxxxxxx,CCOS=CW;
+		
+SIEMENSCCW	Add Cancel Call Waiting
+		EDITSUB:DN=xxxxxxx,COS=CCW;
+		
+		Rmv Cancel Call Waiting
+		EDITSUB:DN=xxxxxxx,CCOS=CCW;
+		
+SIEMENSSC8V	Add Speed Call 8
+		EDITSUB:DN=xxxxxxx,ABB=UPSPD8&SPD8;
+		
+		Rmv Speed Call 8
+		EDITSUB:DN=xxxxxxx,CABB=UPSPD8&SPD8;
+		
+		Add #'s to a Speed Call 8 List
+		EDITSUB:DN=xxxxxxx,ABB=SPD8-?-yyyyyyy;  
+		
+		** NOTE ** ? is position on list 2 thru 9
+		
+SIEMENSSC30V	Add Speed Call 30
+		EDITSUB:DN=xxxxxxx,ABB=UPSPD30&SPD30;
+		
+		Rmv Speed Call 30
+		EDITSUB:DN=xxxxxxx,CABB=UPSPD30&SPD30;
+		
+		Add #'s to Speed Call 30 List
+		EDITSUB:DN=xxxxxxx,ABB=SPD30-?-yyyyyyy;
+		
+		** NOTE ** ? is position on list 20 thru 49
+		
+SIEMENS3WC	Add Three Way Calling
+		EDITSUB:DN=xxxxxxx,COS=TWC;
+		
+		Rmv Three Way Calling
+		EDITSUB:DN=xxxxxxx,CCOS=TWC;
+		
+SIEMENSCFV	Add Call Fowarding Variable
+		EDITSUB:DN=xxxxxxx,DIV=UPCFVDN&CFV;
+		
+		To Activate Call Fowarding Variable
+		EDITSUB:DN=xxxxxxx,DIV=CFV-yyyyyyy&ACTCFV;
+		
+		To Deactivate Call Fowarding Variable
+		EDITSUB:DN=xxxxxxx,CDIV=ACTCFV;
+		
+		Rmv Call Fowarding Variable
+		EDITSUB:DN=xxxxxxx,CDIV=UPCFVDN&CFV;
+		
+SIEMENSCFBF	Add Call Fowarding Busy Fixed
+		EDITSUB:DN=xxxxxxx,DIV=UPCFBLDN&CFBL&ACTCFBL-yyyyyyy;
+		
+		Rmv Call Fowarding Busy Fixed
+		EDITSUB:DN=xxxxxxx,CDIV=UPCFBLDN&CFBL&ACTCFBL;
+		
+SIEMENSCFNF	Add Call Fowarding No Answer Fixed
+		EDITSUB:DN=xxxxxxx,DIV=UPCFDADN&CFDA&ACTCFDA-yyyyyyy;
+		
+		Rmv Call Fowarding No Answer Fixed
+		EDITSUB:DN=xxxxxxx,CDIV=UPCFDADN&CFDA&ACTCFDA;
+		
+SIEMENSCFF	Add Call Fowarding Fixed All
+		EDITSUB:DN=xxxxxxx,DIV=UPDCFFDN&CFF&ACTCFF-yyyyyyy;
+		
+		Rmv Call Fowarding Fixed All
+		EDITSUB:DN=xxxxxxx,CDIV=UPDCFFDN&CFF&ACTCFF;
+
+SIEMENSSPLCA	Add Special Call Acceptance
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=SCAASS;
+		
+		Rmv Special Call Acceptance
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=SCAASS;
+				
+SIEMENSCB	Add Call Block
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=SCRFR;
+		
+		Rmv Call BLock
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=SCRFR;
+		
+		To View a Call BLock List
+		DISPCLASSDAT:DN=xxxxxxx;
+		
+		To Add A # To Call Block List
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=SCRFR,LSTTYP=SCR,SCLDN=npaxxxxxxx;
+		
+SIEMENSACR	Add Auto Call Return
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=ARFR;
+		
+		Rmv Auto Call Return
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=ARFR;
+		
+SIEMENSABR	Add Auto Busy Redial
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=ACFR;
+		
+		Rmv Auto Busy Redial
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=ACFR;
+		
+SIEMENSVIP	Add VIP Alert
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=DRCWFR;
+		
+		Rmv VIP Alert
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=DRCWFR;
+		
+		To View VIP Alert List
+		DISPCLASSDAT:DN=xxxxxxx,CLACOS=DRCWFR;
+		
+		To Add A # To VIP List
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=DRCWFR,LSTTYP=DRCW,SCLDN=npaxxxxxxx;
+		
+SIEMENSCND	Add Caller Number ID
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=CNDFR;
+		
+		Rmv Caller Number ID
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=CNDFR;
+		
+SIEMENSCNND	Add Caller Name ID
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=CNAMDFR;
+		
+		Rmv Caller Name ID
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=CNAMDFR;
+		
+SIEMENSCCNDPL	Add Cancel Caller ID Per Line
+		EDITSUB:DN=xxxxxxx,COS=PVTDN;
+		
+		Rmv Cancel Caller ID Per Line
+		EDITSUB:DN=xxxxxxx,CCOS=PVTDN;
+		
+SIEMENSACRJ	Add Anonymous Call Rejection
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=UCRFR;
+		
+		Rmv Anonymous Call Rejection
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=UCRFR;
+		
+		To Activate ACRJ
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=ACTUCR;
+		
+		To Deactivate ACRJ
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=ACTUCR;
+		
+SIEMENSCT	Add Call Tracing
+		ENTRCLASSDAT:DN=xxxxxxx,CLACOS=COTFR;
+		
+		Rmv Call Tracing
+		CANCLASSDAT:DN=xxxxxxx,CLACOS=COTFR;
+		
+SIEMENSVMS	Add Voice Mail
+		EDITSUB:DN=xxxxxxx,DIV=UPCFBLDN&CFBL&ACTCFBL-yyyyyyy;
+		EDITSUB:DN=xxxxxxx,DIV=UPCFDADN&CFDA&ACTCFDA-yyyyyyy;
+		EDITSUB:DN=xxxxxxx,COSDAT-MSGSERV;
+		
+		Rmv Voice Mail
+		EDITSUB:DN=xxxxxxx,CDIV=UPCFBLDN&CFBL&ACTCFBL;
+		EDITSUB:DN=xxxxxxx,CDIV=UPCFDADN&CFDA&ACTCFDA;
+		EDITSUB:DN=xxxxxxx,CCOSDAT-MSGSERV;
+		
+SIEMENSPIC	Add/Change Inter-lata Pic
+		EDITSUB:DN=xxxxxxx,PIC=0000;
+		
+		Add/Change Intra-lata Pic
+		EDITSUB:DN=xxxxxxx,INTRAPC=0000;
+		
+		Add/Change Intl Pic
+		EDITSUB:DN=xxxxxxx,INTLPC=0000;
+		
+SIEMENSTD	To Temporary Disconnect Service
+		EDITSUB:DN=xxxxxxx,BLKCT=ACCSPTER,LCC=TMPD;
+		
+		To Reconnect from Suspend
+		EDITSUB:DN=xxxxxxx,CBLKCT=ACCSPTER,LCC=1FR;
+		
+SIEMENSSWAP	To Change TN#
+		MODDN:DN=xxxxxxx,NEWNPA=xxx,NEWDN=xxxxxxx;
+		
+SIEMENSNEW	To Install Service in Switch
+		CRSUB:DN=xxxxxxx,EQN=????-?-??-??,CAT=MS,LCC=1FR,
+		      RAX=1,ORIG1=1,PIC=0000,LNATT=DTMF;
+		      
+SIEMENSDEL	To Delete Service
+		CANSUB:DN=xxxxxxx;
+		
+SIEMENSOPIN	To Add Operator Intercept
+		MODDN:DN=xxxxxxx,INCEPT=CHNAGEDN;
+		
+	
+--------------------------------------------------------------------------------
+
+VIDARSTART     Login to Switch                                    
+              1) (enter) will get you the prompt (SS* or PS*)
+              
+          NOTE: Below Commands Not Required with new Care Switch access
+              
+              2) STAT (enter) to check switch status
+              3) DO (enter) to turn off alarms in switch
+              4) (enter) to get prompt (SS* or PS*)
+                 
+VIDARSTART     Time and Date                                     
+              TY   (To Check for Time & Date)
+        
+VIDAREXAM      Examine Number                                      
+              BLP XXXXXXX
+
+VIDARHUNT      Examine Hunt Group Pilot #                         
+              BLP XXXXXXX HUNT
+
+VIDARSTOP      End Recent Change & Logoff                       
+              1) / (enter)
+              2) rel (enter)
+              3) bye (enter)
+           
+          NOTE: not required with new Care Switch access
+               
+VIDARTC        Add        Touch Call                               
+              BLM XXXXXXX M COS ??  (COS ?? = 2-3 digit number)
+               COS ?? can be found in "blocks" file in North Blocks File (OLHB) 
+
+VIDARDP        Remove Touch Call                                   
+              BLM XXXXXXX M COS??   (COS ?? = 2-3 digit number)
+               COS ?? can be found in "blocks" file in North Blocks File (OLHB)
+
+VIDARCW        Add Call Waiting                                    
+              BLM XXXXXXX M CW
+
+               Remove Call Waiting                        
+              BLM XXXXXXX M -CW
+
+VIDARCFV       Add Call Forwarding Variable                      
+              BLM XXXXXXX M VCF
+
+               Remove Call Forwarding Variable                   
+              BLM XXXXXXX M -VCF
+
+VIDARCFF       Add Call Forwarding Fixed                          
+              BLM XXXXXXX M FCF
+
+               Remove Call Forwarding Fixed                   
+              BLM XXXXXXX M -FCF
+
+VIDARRCF       Add Remote Call Forwarding  
+              BLM XXXXXXX M FCF
+
+               Remove Remote Call Forwarding                    
+              BLM XXXXXXX M -FCF
+
+VIDARSC8V      Add Speed Call 8                                   
+              BLM XXXXXXX M SAD
+
+               Remove Speed Call 8                       
+              BLM XXXXXXX M -SAD
+
+VIDAR3WC       Add Three Way Calling                                
+              BLM XXXXXXX M 3WC
+
+               Remove Three Way Calling                   
+              BLM XXXXXXX M -3WC
+
+VIDARSC30V     Add Speed Call 30                                   
+              BLM XXXXXXX M LAD
+
+               Remove Speed Call 30                       
+              BLM XXXXXXX M -LAD
+
+VIDARCT        Add Nuisance Call Hold (Call Tracing Svc)                                   
+              BLM XXXXXXX M NCH
+
+               Remove Nuisance Call Hold (Call Tracing Svc)                       
+              BLM XXXXXXX M -NCH
+
+VIDARPIC       Add/change Inter-Lata Pic  (GTE = 5483) 
+	      BLM XXXXXXX M PIC1>0???D (??? = carrier pic code ,example:'288')
+	      
+	       Add/Change Intra-Lata Pic  (GTE = 5483)
+	      BLM XXXXXXX M PIC2>0???D
+
+               Add/Change Intra-Lata & Inter-Lata Pic  (GTE = 5483 for both)
+	      BLM XXXXXXX M PIC1>0???D PIC2>0???D
+	      
+	       Delete Intra-Lata Pic
+	      BLM XXXXXXX M PIC2>0000
+
+       Note: The Intra-Lata pic should not be in switch if customer wants GTE
+             to continue billing them for those calls. putting "5483 or 5448"
+             in switch will block cust from calling out local & long distance.
+
+VIDAROPIN      Change from VN to IC                                
+              BLM XXXXXXX M 2 CHNG
+
+               Change from IC to VN                                 
+              BLM XXXXXXX M 1 UNAS
+          
+VIDARNEW       Install new line
+	      BLA Syy yy yy XXXXXXX 37 1 PIC1>??? (features)
+	           LNI #      tn #
+
+VIDARABORT     To Abort from a Recent Change 
+              / <enter>
+	    
+VIDARDEL       Delete a line
+	      1) BLD XXXXXXX 1    (No Intercept)
+	      2) BLD XXXXXXX 2  (Intercept Recording)
+	      	     	      
+	NOTE: If switch asks for Special Route enter "UNAS" for number 1) &
+	      "CHNG" for number 2
+
+DMS10ERROR      DMS10 DMO Error Messages & what they mean
+
+    DMO000 = DMO Program Loaded in Overlay Area
+               
+    DMO010 = AMA Not Equipped in the Configuration Record
+               
+    DMO011 = Invalid Response to "REQ" Prompt
+               
+    DMO012 = Invalid Response to "TYP" Prompt
+               
+    DMO013 = Non-Numeric reply to Directory Prompt
+               
+    DMO014 = "ALL" Response Valid only with "QUE" and "DEL" Commands
+               
+    DMO020 = Invalid Location Specification
+               
+    DMO030 = Unexpected Input Fields Found. An end of Line was expected
+            
+    DMO031 = Abort Command Input Ignored , Tape operation in progress
+            
+    DMO032 = More Input Expected on this Line
+            
+    DMO035 = Abort Command Ignored , Storage being Updated
+            
+    DMO040 = DCM being Deleted does not exist
+            
+    DMO041 = Improper Location Specification for DCM
+            
+    DMO042 = DCM being Queried does not Exist
+            
+    DMO048 = DCM being Changed does not Exist
+            
+    DMO049 = DCM Location is invalid because site is not a base site or shelf
+             can't be used as DCM shelf or DCM exists at given location
+                     
+    DMO060 = Network Pack does not Exist
+            
+    DMO062 = Loop Assigned to DCM not Terminal
+            
+    DMO063 = Improper loop type for the DCM
+            
+    DMO064 = Improper reply to "SYNC" prompt
+            
+    DMO065 = Improper reply to "SLPM" prompt
+            
+    DMO066 = Improper reply to "SLPO" prompt
+            
+    DMO067 = Improper reply to "BPVM" prompt
+            
+    DMO068 = Improper reply to "BPVO" prompt
+            
+    DMO069 = Improper reply to "FRLM" prompt
+            
+    DMO070 = Improper reply to "FRLO" prompt
+            
+    DMO071 = Improper DCM slot Location Specified
+            
+    DMO076 = Data Record overflows onto next physical tape record, but
+             "OVF_BLOCK_LENGTH" in next record is not the expected value
+                    
+    DMO077 = A data block was found that overflowed onto next physical tape
+             block, but next tape record is "EOF" which is totally unexpected
+                     
+    DMO078 = "EOF" encountered when looking for Equipment Record
+            
+    DMO081 = Shelf being Deleted of wrong type
+            
+    DMO082 = Shelf being Queried of wrong type
+            
+    DMO083 = Shelf cannot be added to a terminal loop used for DCM
+            
+    DMO091 = Loop is not unassigned has existing shelves, DCM or REM
+            
+    DMO092 = Mate loop is not unassigned or DCM or RCM's physical 
+             location not consistent with mate loop
+                     
+    DMO093 = Site is invalid or does not exist
+            
+    DMO094 = Pack number is invalid for DCM or RCM
+            
+    DMO096 = DCM or RCM is software unequipped
+            
+    DMO098 = DCM or RCM physical location is already equipped or not
+             REM controller shelf
+                     
+    DMO099 = Terminal Network pack does not contain two terminal loops 
+            
+    DMO100 = Network pack being Deleted does not exist
+            
+    DMO101 = Network pack being Queried does not exist
+            
+    DMO102 = Invalid Coin Controll type
+            
+    DMO103 = Network pack being added already exists or improper
+             location specification
+                     
+    DMO104 = Network pack being added does not have NS pack
+            
+    DMO105 = Improper NWPK type (must be "PESH","SNWK","CONF")
+            
+    DMO106 = Improper input for location specification
+            
+    DMO107 = Network pack being deleted has existing shelves
+            
+    DMO108 = Adjacent slot for line trunk test has been previous assigned. 
+             Delete the pack adjacent to LTT or relocate the LTT pack
+                     
+    DMO109 = Invalid start signalling type for 2T03(misc) or 2T04(ppcl) pack
+                     
+    DMO110 = Shelf being deleted does not exist
+            
+    DMO111 = Shelf being Queried does not exist
+            
+    DMO112 = Shelf already exists in this location
+            
+    DMO113 = Shelf being deleted has existing cards
+            
+    DMO115 = Shelf begin added already on the loop
+            
+    DMO116 = Shelf being added has wrong type of loop
+            
+    DMO117 = Trying to add pack to other than PE loop
+            
+    DMO118 = Invalid logical shelf number
+            
+    DMO119 = DCM shelf being deleted has existing packs
+            
+    DMO120 = Attempt to incorrectly assign logical shelf
+            
+    DMO121 = Card being Queried does not exist
+            
+    DMO122 = Pack being added already exists
+            
+    DMO123 = Pack begin deleted has existing units or if it's a 2T17,2T40,
+             or 2T03 card it is referred to by a noller route
+                     
+    DMO124 = Shelf for pack does not exist
+            
+    DMO125 = 2T12 (PCI) Packs can't be added. They are automatically added
+             when shelf is added to system
+                     
+    DMO126 = Invalid card type
+            
+    DMO127 = 2T14 (PMA) pack must go in slot 14
+            
+    DMO128 = 2T14 (PMA) pack already exists on this frame
+            
+    DMO129 = Trunk packs must go in locations 1 to 4
+            
+    DMO130 = Improper reply to HNPA prompt
+            
+    DMO131 = Cannot delete a 2T12 (PCI) pack
+            
+    DMO132 = HNPA being added already exists
+            
+    DMO133 = Office already has maximum no of home NPA's
+            
+    DMO134 = HNPA being referrred to does not exist
+            
+    DMO135 = HNPA being deleted referrred to by thousands group
+            
+    DMO136 = Improper reply to OWT prompt
+            
+    DMO137 = Owtwats band for HNPA out of range
+            
+    DMO138 = Improper reply to Toll prompt
+            
+    DMO139 = Toll band a duplicate or out of range (0-31)
+            
+    DMO140 = Software error while updating correlation parameters; CS alloc- 
+             ation failure yet no CS allocation is required for circuit added
+                     
+    DMO141 = Software error while updating correlation parameters;CS alloc-
+             ation failure yet no CS allocation is required when deleting Ckt
+                     
+    DMO142 = CS allocation failed while adjusting the correlation queue size
+                     
+    DMO143 = Invalid syntax in specifying REM
+            
+    DMO144 = CPSC pack must go in locations 1 to 4
+            
+    DMO146 = Extended range line packs must go on enhanced shelves
+            
+    DMO147 = Zero DB PPCL line packs must go on enhanced shelves
+            
+    DMO148 = Improper reply to 'RC' prompt
+            
+    DMO149 = RC is out of range
+            
+    DMO150 = Non-numeric input reply to RC prompt
+            
+    DMO151 = Rate center is out of range
+            
+    DMO152 = Network pack being deleted has existing rem
+            
+    DMO153 = Invalid pack number specification
+            
+    DMO160 = Non-numeric input reply to "lca" prompt
+            
+    DMO161 = Lca number is out of range
+            
+    DMO170 = Maximum # of cfw subscribers hasn't exceeded cfw opt not added
+            	     
+    DMO171 = Unable to allocate ds for new cfw block
+            
+    DMO172 = Maximum # of cfw subscribers hasn't exceeded cfw opt not added
+            
+    DMO173 = Unable to allocate ds for cfw subscriber data table
+            
+    DMO193 = Co code being added already exists
+            
+    DMO194 = Co code being deleted does not exist
+            
+    DMO195 = Co code table is full - maximum 8 entries
+            
+    DMO196 = Co code being queried does not exist
+            
+    DMO197 = No CO codes defiened -- Cannot specify delete all
+            
+    DMO199 = Incomplete option or improper syntax attemped
+            
+    DMO200 = Improper reply to PRFX prompt
+            
+    DMO201 = Prefix tree number out of range 
+            
+    DMO202 = Prefix tree has not been delared
+            
+    DMO203 = Improper reply to ADDR propmt
+            
+    DMO204 = HNPA is out of range 
+            
+    DMO205 = HNPA being referred to does not exist
+            
+    DMO206 = Address tree has not been declared
+             
+    DMO207 = Improper reply to SCRN prompt
+            
+    DMO208 = Screening tree number out of range
+            
+    DMO209 = Screening tree has not been declared
+            
+    DMO210 = Uncodeable node for path
+            
+    DMO211 = Invalid node for prefix tree
+            
+    DMO212 = Invalid node for prefix tree or a leaf was entered without a 
+             node value proceeding it
+            	     
+    DMO213 = Invalid node for screening tree
+            
+    DMO214 = Region number out of range
+            
+    DMO215 = No. of timeout digits out of range
+            
+    DMO216 = Digit number out of range
+            
+    DMO217 = Route number out of range
+            
+    DMO218 = Destination number out of range
+            
+    DMO219 = Incorect format of Thousands group digits
+            
+    DMO220 = Thousands group has not been declared
+            
+    DMO221 = Attempt to query Thousands group when none are being defined
+                  	            
+    DMO222 = Too many absorbed digits specified, maximum is 15
+            
+    DMO223 = Too many absorbed digits specified, maximum is 12
+            
+    DMO224 = The same node must follow a dig node
+            
+    DMO225 = Invalid response to '3T69' prompt
+            
+    DMO226 = Invalid response to 'ALPT' prompt
+            
+    DMO227 = Invalid response to 'ALSD' prompt
+            
+    DMO228 = Invalid Cenertal Office code specified
+            
+    DMO229 = Illegal number of called digits to be absorbed.
+     	     Range is from 1-16
+            	     
+    DMO230 = Invalid test line type
+            
+    DMO231 = Invalid route number specified/out of range
+            
+    DMO232 = Route being added already exists
+            
+    DMO233 = Route being deleted does not exist
+            
+    DMO234 = Route being queried does not esist
+            
+    DMO235 = Invalid generic route type
+            
+    DMO236 = Invalid route type
+            
+    DMO237 = Invalid tone tpye
+            
+    DMO238 = Non-Numeric input for trunk group number
+            
+    DMO239 = Trunk group number out of range, # of alarm packs must be 2 or 3
+                     
+    DMO240 = Non-Numeric response for count of cycles
+            
+    DMO241 = Count of cycle out of range
+            
+    DMO242 = Invalid class of service tone
+            
+    DMO243 = Invalid charging response (should be Yes or No)
+            
+    DMO244 = Non-Numeric response for NO. of digits deleted
+            
+    DMO245 = Number of digits deleted out of range
+            
+    DMO246 = Invalid prefix to be added
+            
+    DMO247 = Prefix to be added has too many digits
+            
+    DMO248 = Non-numeric input for maxium digits outpulsed
+            
+    DMO249 = Maxium digits outpulsed out of range
+            
+    DMO250 = Invalid signal type
+            
+    DMO251 = Invalid identity digit
+            
+    DMO252 = Invalid category digit
+            
+    DMO253 = Invalid response to ANI fail type prompt
+            
+    DMO254 = Invalid response to ADDR prompt
+            
+    DMO256 = Alternate routes from a circle or too long a chain. Route added
+             anyway. Invalid ANI spill start signal type.
+                     
+    DMO257 = No digital trunks equipped
+            
+    DMO258 = Outgoing trunk group type is not CPSC
+            
+    DMO259 = Trunk group for CPSC must be outgoing
+            
+    DMO260 = Invalid destination number
+            
+    DMO261 = Invalid toll band
+            
+    DMO262 = Invalid traffic separation index
+            
+    DMO263 = Invalid minimum number of digits
+            
+    DMO264 = Invalid optional number of digits
+            
+    DMO265 = Invalid ANI spill timeout treatment
+            
+    DMO266 = Invalid receive coin control type
+            
+    DMO267 = Invalid send coin control type
+            
+    DMO268 = Cama position being added already exists
+            
+    DMO269 = Cama position being deleted does not exist
+            
+    DMO270 = Invalid thousands group
+            
+    DMO271 = Thousands group being added already exists
+            
+    DMO272 = 64 thousands groups already exist & attempt to add new one
+            
+    DMO273 = Attempt to change thousands groups that do not exist
+            
+    DMO274 = Attempt to delete thousands group that does not exist
+            
+    DMO275 = Attempt to query non-existant thousands group
+            
+    DMO276 = Attempt to delete thousand grp that has DN's assigned within it.
+                   
+    DMO277 = Invalid reply for traffic separation index
+            
+    DMO278 = Invalid response to synchronous test prompt
+            
+    DMO279 = Invalid response to guard time prompt
+            
+    DMO280 = Invalid trunk group number
+            
+    DMO281 = Invalid trunk group type
+            
+    DMO282 = Trunk group being deleted does not exist
+            
+    DMO283 = Trunk group being deleted has existing trunks
+            
+    DMO284 = Trunk group being changed does not exist
+            
+    DMO285 = Trunk group being added already exists
+            
+    DMO286 = Trunk group being queried does not exist
+            
+    DMO287 = Invalid response for remotely made busy prompt
+            
+    DMO288 = Invalid response to flash prompt
+            
+    DMO289 = Invalid response for start pulsing signal type prompt
+            
+    DMO290 = Invalid response for receiver or transmission type prompt
+            
+    DMO291 = Invalid response to idle trunk selection format
+            
+    DMO293 = Invalid response to glare control prompt
+            
+    DMO294 = Invalid response to controlling parties prompt
+            
+    DMO296 = Invalid response to verification test prompt
+            
+    DMO297 = Gaurt time must be defined in MSEC & less than 3969 MSEC.
+             Invalid response to TRNL type prompt
+                     
+    DMO298 = Destination does not exist
+            
+    DMO299 = Trunk group being deleted is active for CLI
+            
+    DMO300 = This category valid for Que command only
+            
+    DMO301 = Non-numeric response to buffer size
+            
+    DMO302 = Buffer size out of range
+            
+    DMO303 = Invalid number of regions
+            
+    DMO304 = Improper reply to "SYNC" prompt
+            
+    DMO305 = A physical location must be entered
+            
+    DMO306 = Invalid outwats type
+            
+    DMO307 = Invalid response to "SLPR" must be "yes" or "no"
+            
+    DMO308 = Logical unit already exists
+            
+    DMO309 = Improper response to "ALT" prompt
+            
+    DMO310 = Primary & alternate DCM's can't be the same physical location.
+             Invalid response to OPRN prompt.
+                     
+    DMO311 = CE location already equipped. Attempted to delte your own TTY. 
+             Invalid entry for coin-control.
+                     
+    DMO312 = Non-numeric input for logical unit member.
+            
+    DMO313 = Logical unit number out of range.
+            
+    DMO314 = Invalid device type
+            
+    DMO315 = Invalid TTY or Tape number
+            
+    DMO316 = TTY ot Tape number out of range
+            
+    DMO317 = Invalid user type
+            
+    DMO319 = Overlay program does not exist
+            
+    DMO320 = Overlay program appears twice in list
+            
+    DMO321 = Invalid response for route number
+            
+    DMO322 = Route number out of range or has not been declared
+            
+    DMO323 = Routes make a circular route
+            
+    DMO324 = Invalid call register timing entry
+            
+    DMO325 = Call register timing out of range
+            
+    DMO326 = Invalid response to number of groups prompt
+            
+    DMO327 = Invalid response to MF ringing prompt
+            
+    DMO328 = Error while scanning CE location
+            
+    DMO329 = Input must be a numeric number
+            
+    DMO330 = NOSR must be in the range 0 to 128 inclusive
+            
+    DMO331 = Invalid syntax for password
+            
+    DMO332 = Password should be 4 decimal digits
+            
+    DMO333 = Invalid syntax for operation field
+            
+    DMO334 = Incorrect syntax for module mnemonic
+            
+    DMO335 = Invalid syntax for tone
+            
+    DMO336 = Invalid sourcetone
+            
+    DMO337 = CE location already equipped
+            
+    DMO338 = Invalid syntax of range for CE location
+            
+    DMO339 = Invalid syntax for noller special access code
+            
+    DMO340 = Improper reply to "TRK" prompt. Attempt to delete non-existent 
+             logical unit.
+                     
+    DMO341 = Trunk being added already exists
+            
+    DMO342 = Trunk being deleted does not exist
+            
+    DMO343 = Trunk being queried does not exist. Invalid response to noller
+             busy monitor - must be "yes" or "no"
+                     
+    DMO344 = Non-trunk card at location specified
+            
+    DMO345 = No card exista at location specified
+            
+    DMO346 = Invalid response for trunk type prompt
+            
+    DMO347 = Invalid response for trunk group prompt
+            
+    DMO348 = Trunk group does not exist or is improper type
+            
+    DMO349 = Improper response to "PRIM" prompt
+            
+    DMO350 = Invalid response to A/D gain prompt
+            
+    DMO351 = This CE location already equipped
+            
+    DMO352 = Syntax or range error in CE location
+            
+    DMO353 = Attempt to add already existing module
+            
+    DMO354 = Attempt to delete a non-existent module
+            
+    DMO355 = Data-link TTY's max not have any other user class
+            
+    DMO356 = Invalid response to "ENDC" prompt-must be "chck" or "canc"
+            
+    DMO357 = Invalid input for physical location
+            
+    DMO358 = Invalid response to "MULT" prompt - must be "yes" or "no"
+            
+    DMO359 = Attempt to add incompatible options
+            
+    DMO360 = Batch TTY's may not have any other user class
+            
+    DMO361 = Invalid syntax for digitone disable switch
+            
+    DMO362 = Invalid syntax for coin_stuck_test switch
+            
+    DMO363 = Directory # not assigned to a station. Vacant # in Sw.
+            
+    DMO364 = Attempt to suspend a station which is already suspended
+            
+    DMO365 = Password must be 4 digits
+            
+    DMO368 = Card for physical location does not exist
+            
+    DMO369 = Data integrity error. Inconsistancy between directory number 
+             and functional translator
+                     
+    DMO371 = Card type is not useable for lines
+            
+    DMO372 = Attempt to delete a non-existent option
+            
+    DMO373 = Digits expected after "AUT" response
+            
+    DMO374 = Option cannot be deleted
+            
+    DMO375 = Invalid emergency (911) region
+            
+    DMO376 = Invalid ringing code. New Install Error Requiring (RCO R1)
+             in New Programming.
+            
+    DMO377 = Maximum of 16 digits may be specified
+            
+    DMO378 = Too many parties on line
+            
+    DMO379 = Ringing code is incompatible with card type
+            
+    DMO380 = Line type (1pty,2pty,ect..) incompatible with card type
+            
+    DMO381 = Line type (1pty,2pty,ect..) incompatible /c options on line
+            
+    DMO382 = Card type incompatible with options on line
+            
+    DMO383 = DN added has different DGT option from oth pty's on line
+            
+    DMO384 = Line type (1pty,2pty,ect..) does not match oth's on line
+            
+    DMO385 = Another party on line has same ringing code
+            
+    DMO386 = DN added has different EMR option from other pty's
+            
+    DMO387 = Attempt to add an option that already exists
+            
+    DMO388 = Local calling area of new stat, thousands group different from
+             that of other pty's on the line.
+                     
+    DMO389 = HNPA of new stat different from that of other stat's
+            
+    DMO390 = Expected directory # to be input but end of line found instead. 
+                     
+    DMO391 = "ABC" digits of directory number are non-numeric. Invalid "ABC"
+             digits of directory number.
+            
+    DMO392 = Incorrect # of digits entered for directory # "ABC" digits
+            
+    DMO393 = End of line found when looking for directory # "DEFG" digits.
+                     
+    DMO394 = Non-numeric directory number "DEFG" digits entered
+            
+    DMO395 = Incorrect number of digits entered for directory # "DEFG" field.
+                     
+    DMO396 = Thousands group for directory number is unassigned. Number is
+             in a Remote off Base Unit.
+            
+    DMO397 = Invalid directory number hunt group number. Password entered 
+             is not administrative password.
+            
+    DMO398 = Specified directory number hunt group does not exist. Invalid
+             PE location for test trunk.
+                     
+    DMO399 = No line assigned to directory number that line is to follow
+             in directory number hunt group.
+                     
+    DMO400 = Directory number that line is the follow in hunt group is not a
+             member of the hunt group.
+                    
+    DMO401 = Software error in translation
+            
+    DMO402 = Invalid response to operator traffic prompt
+            
+    DMO403 = Invalid loop signalling type
+            
+    DMO404 = Illegal automatic digit specified
+            
+    DMO405 = Invalid overlay input for schedule
+            
+    DMO406 = Noller special access code should be at most 2 digits
+            
+    DMO407 = Incorrect syntax for administrative password
+            
+    DMO408 = Invalid syntax for coin_control tone
+            
+    DMO409 = Invalid tip or ring code (T1-T5, R1-R5 expected)
+            
+    DMO410 = Non-numeric hunt group #
+            
+    DMO411 = Hunt group number out of range
+            
+    DMO412 = Invalid hunt group "SRCH" type
+            
+    DMO413 = Hunt group does not exist
+            
+    DMO414 = Hunt group already exists
+            
+    DMO415 = Hunt group being deleted contains stations
+            
+    DMO416 = Card type is not useable for standby lines
+            
+    DMO417 = Improper reply to DNH prompt
+            
+    DMO418 = Invalid outwats band number
+            
+    DMO419 = Line circuit in use - cannot specify as a standby unit
+            
+    DMO420 = Invalid response to call type prompt
+            
+    DMO421 = Tone not valid for coin_control
+            
+    DMO422 = Directory number already assigned to a station
+            
+    DMO423 = Directory number within group assigned to a station
+            
+    DMO424 = Attempt to resume service on an unsuspended station
+            
+    DMO425 = Invalid directory # option. Invalid data imputed retype request. 
+            
+    DMO426 = Invalid "DEFG" digits entered or Not enough Digits Entered
+                     (ABC-DEFG is actually NXX-XXXX)
+            
+    DMO427 = Option not implemented yet
+            
+    DMO428 = Invalid input for physical location
+            
+    DMO429 = Invalidring code: R5. T5 not compatible with MF ringing
+            
+    DMO430 = Invalid reply to receiver off hook prompt
+            
+    DMO431 = Standby line circuit has already been declared
+            
+    DMO432 = Standby line circuit being deleted does not exist
+            
+    DMO433 = Standby line circuit being queried does not exist
+            
+    DMO434 = Standby line circuit being deleted is active in sparing
+            
+    DMO435 = Invalid response for coin control type
+            
+    DMO436 = Invalid response to ROH prompt
+            
+    DMO437 = Call Forwarding not equipped in office
+            
+    DMO438 = Three-way calling not equipped in office
+            
+    DMO439 = Invalid response to "ACKA" prompt
+            
+    DMO440 = Short Speed calling not equipped in office
+            
+    DMO441 = Long Speed calling not equipped in office
+            
+    DMO444 = Directory number already assigned to route intercept for type
+             other than VCDN,VCCO, or DNIC.
+            
+    DMO449 = Not A Valid TN Number Imputed
+                     
+    DMO466 = Reply to hunting "OVFL" type
+            
+    DMO499 = Check line for "RCO R1". Will need to be rmv'd. Deleting"RCO R1" 
+             requires deleting entire svc & reinstalling it without it.
+    
+    DMO508 = Invalid feature option. Check line for "RCO R1". Will need to be 
+             rmv'd. Deleting"RCO R1" requires deleting entire svc & 
+             reinstalling it without it.
+            
+    DMO525 = Invalid response to RGBK prompt
+            
+    DMO527 = Queried directory number terminating on a station. Query station
+             in order to obtain desired information.
+                     
+    DMO528 = Queried digit group being routed on preceding digits. Just enter
+             phone number again not 'que stn'.
+            
+    DMO529 = Attempt to suspend a subscriber with 8FR or 10FR type
+            
+    DMO555 = Invalid command for ODB option
+            
+    DMO556 = Invalid FIXL parameter
+            
+    DMO557 = For ODB line: 1 option: "NRML","VARL","FIXL" must be specified.
+                     
+    DMO600 = Can't change PKTP unless all trunks are deleted from trunk grp
+            
+    DMO601 = Invalid reply to PKTP prompt
+            
+    DMO602 = Invalid response to "name" prompt
+            
+    DMO603 = Invalid response to outgoingloop trunk signalling type
+            
+    DMO604 = Site being deleted has equipped frames
+            
+    DMO605 = Pack type of trunk is not the same as that of trunk group
+            
+    DMO606 = Invalid reply to TGDP prompt
+            
+    DMO607 = Invalid response to "OPTY" prompt
+            
+    DMO608 = Base site being added already exists
+            
+    DMO609 = Must add base site before adding any REM site
+            
+    DMO610 = No pack exists at the location specified
+            
+    DMO611 = Improper reply to "DTRK" prompt
+            
+    DMO612 = Invalid channel number specification
+            
+    DMO614 = Channel being added already exists
+            
+    DMO615 = Channel being deleted does not exist
+            
+    DMO616 = Channel being queried does not exist
+            
+    DMO617 = Attempt to delete a studied trunk
+            
+    DMO618 = Attempt to delete a studied trunk
+            
+    DMO619 = Attempt to delete synchronous DCM
+            
+    DMO620 = Invalid timing response
+            
+    DMO621 = Timing response out of range
+            
+    DMO622 = IDT must be an even multiple of 100
+            
+    DMO623 = Unable to add line & test trunk
+            
+    DMO624 = Invalid response to "NODL" prompt
+            
+    DMO625 = Attempt to preform DMO on a studied line
+            
+    DMO626 = Attempt to alter data of a studied line
+            
+    DMO627 = More than 4 prefix digits - Invalid
+            
+    DMO628 = For which configuration is being changed does not exist
+            
+    DMO629 = Attempt to preform on a spared line
+            
+    DMO630 = Invalid response to TRFC prompt
+            
+    DMO631 = Invalid response to ANIS prompt
+            
+    DMO632 = Invalid response to ASIG prompt
+            
+    DMO633 = Invalid response to TRFC prompt
+            
+    DMO634 = Invalid response to "STYP" prompt
+            
+    DMO635 = Invalid reply to CO prompt
+          
+    DMO636 = Invalid location specified for CPSC trunk
+            
+    DMO637 = CPSC trunk must be outgoing
+            
+    DMO638 = 4-wire test trunk in wrong_group
+            
+    DMO639 = Inappropriate group location for test trunk
+            
+    DMO640 = Invalid response to carrier group prompt
+            
+    DMO641 = Carrier group full, maximum 255 trunks
+            
+    DMO642 = Test trunk not at the same site as the site being modified
+          
+    DMO643 = Match not found for line & test trk can't delete line & test trk
+                     
+    DMO644 = Site being added already exists
+            
+    DMO645 = Invalid response to "SFRL" or "MFRL" prompt
+            
+    DMO646 = Base site is being deleted while REM site exists
+            
+    DMO647 = Invalid response ro "NENM" prompt
+            
+    DMO648 = Invalid response ro "ITDL" prompt
+            
+    DMO649 = Invalid response ro "PRFX" prompt. Single or Multi frequency
+             ringing limit out of range.
+            
+    DMO650 = Inappropriate group for 2 wire test trunk
+            
+    DMO651 = Inappropriate test trunk type
+            
+    DMO652 = Invalid location for test trunk
+            
+    DMO653 = Number of mnemonic characters out of range
+            
+    DMO654 = Invalid response to "MTLI" prompt
+            
+    DMO655 = Attempt to use a standby unit as a line
+            
+    DMO656 = Invalid response to loop trunk pulsing type
+            
+    DMO658 = Single or Multi-frequency ringing limit out of range
+            
+    DMO701 = Input for MTU must be numeric
+            
+    DMO702 = MTU number must be between 0 and 3
+            
+    DMO703 = Invalid syntax for MTU assn
+            
+    DMO704 = Attempt to delete non-existent MTU
+            
+    DMO705 = This MTU is already assigned. to re-assign must delete first
+            
+    DMO706 = Already two MTU's assigned as AMA driver
+            
+    DMO707 = CE location already equipped
+            
+    DMO708 = MTC card must be in slot 6
+            
+    DMO709 = Error while scanning CE location
+            
+    DMO710 = Invalid response to "AMA" prompt
+            
+    DMO711 = Input for number of billing registers non-numeric
+            
+    DMO712 = Number of billing registers must be less than 2000
+            
+    DMO713 = Input for blocks per AMA tape record non-numeric
+            
+    DMO714 = Invalid response to call type 'CTYP' prompt
+            
+    DMO715 = Invalid response to billing type 'BTYP' prompt
+            
+    DMO716 = Invalid response to print 'PRNT' prompt
+            
+    DMO717 = Invalid response to AMA failure treatment 'TDWN' prompt
+            
+    DMO718 = Invalid response to no billing register treatment 'TNBR' prompt
+                     
+    DMO719 = LCDR not equipped in the Config record
+            
+    DMO720 = Invalid response -- must be "yes" or "no"
+            
+    DMO721 = "no" or "yes" expected for DPTM (Hardware vs Software timing). 
+             AMA not equipped in the Config record.
+                      
+    DMO722 = Invalid response to "CSUS" - must be "act" or "DACT"
+            
+    DMO723 = CAMA not equipped in the Config record.
+          
+    DMO724 = Invalid response to TRMT prompt - must be "FREE" or "BLCK"
+            
+    DMO725 = The operator trouble code must be a 3 digit # (not 000)
+            
+    DMO726 = Input must be a PE card number
+            
+    DMO727 = "ANIF" not allowed since NONE was entered for "ANIF" prompt
+      
+    DMO728 = 'NONE' not allowed if response to 'TDWN' or 'TNBR' is "ANIF"
+      
+    DMO729 = 'NONE' response allowed only if CAMA is set in the Config record
+      
+    DMO733 = Numeric input out of range
+      
+    DMO734 = Attempt to alter Fixed alarm point
+      
+    DMO735 = Number of blocks per tape record must equal 12,24 or 48
+      
+    DMO737 = Invalid input to 'SRCE' prompt
+      
+    DMO738 = Invalid input to 'CLAS' prompt
+      
+    DMO739 = Invalid input to 'PWR' prompt
+      
+    DMO740 = Inappropriate response tp 'ALPT' prompt
+      
+    DMO741 = Expiry time must be less than 512 days
+      
+    DMO742 = Card number must be either 2T12 or 2T41
+      
+    DMO743 = Invalid PCI card type. Must be 2T41 for REM shelf
+      
+    DMO744 = Input for expiry time non-numeric
+      
+    DMO768 = Invalid reply to overlap outpulsing prompt
+      
+    DMO780 = Invalid input to 'DELY' prompt
+      
+    DMO782 = 'INDT' should be 1 to 31 inclusive
+      
+    DMO783 = This alarm already defined in data
+     
+    DMO784 = Invalid input to 'IDNT' prompt
+      
+    DMO786 = Nil ALRM_INFO_OPTR found in translation
+      
+    DMO789 = Changes to 201 alarms are not allowed (These are hard defined)
+      
+    DMO800 = Shelf for card being added does not exist
+      
+    DMO801 = Unable to allocate call store card block
+      
+    DMO802 = Unable to allocate data store card block
+      
+    DMO803 = Invalid card circuit type
+      
+    DMO804 = Error in adding a network pack
+      
+    DMO805 = Unable to allocate call store loop block
+      
+    DMO806 = Unable to allocate data store group block
+      
+    DMO807 = Unable to allocate data store loop block
+      
+    DMO808 = Path replaces old path. And this is 'NEW' command
+      
+    DMO809 = Unable to allocate DS translation structure
+      
+    DMO810 = Unable to allocate DS route block
+      
+    DMO811 = Loop for shelf being added. Does not exist
+      
+    DMO812 = Unable to allocate unprotected call store card block
+      
+    DMO813 = Unable to allocate data store shelf block
+      
+    DMO814 = Unable to allocate data store card block
+      
+    DMO815 = Unable to allocate EFG translation block. Directory number 
+             not updated
+               
+    DMO816 = Unable to allocate trunk list blocks for trunk group
+      
+    DMO817 = Unable to allocate trunk group index structure
+      
+    DMO818 = Error in deleting a network pack
+      
+    DMO819 = Unable to allocate store for frame block
+      
+    DMO820 = Illegal function being added
+      
+    DMO821 = Shelf being deleted does not exist
+      
+    DMO822 = Shelf being deleted of wrong type
+      
+    DMO823 = Unable to allocate larger trunk terminal list data store block
+      
+    DMO824 = In processing a change DN tape block. Translation data for old 
+             DN did not lead to valid terminal number.
+               
+    DMO826 = Data inconsistentcy error in adding DN hunt for a line
+      
+    DMO827 = Shelf being added already exists
+      
+    DMO828 = Peripheral equipment shelf cannot be added to DCM loop
+      
+    DMO829 = Card being added already exists
+      
+    DMO830 = Card being deleted does not exist
+      
+    DMO831 = Data integrity error in updating thousands group translation
+      
+    DMO832 = Unable to allocate hunt group terminal number list
+      
+    DMO833 = Unable to allocate DS hunt group block
+      
+    DMO834 = Delete hunt group tape block found. Yet hunt group does not 
+             exist in core. This should never happen except when tape records
+             lost during sysload.
+               
+    DMO835 = Loop on network pack being added already exists
+      
+    DMO836 = Loop on network pack being deleted does not exist
+      
+    DMO837 = DCM being deleted does not exist
+      
+    DMO838 =  DCM does not exist
+     
+    DMO839 = Unable to allocate call store channel block
+      
+    DMO840 = Invalid 'TP_BLOCK_TYPE' field found in tape data block
+      
+    DMO841 = Unable to add line to list for directory number hunting
+      
+    DMO842 = Attempt to add too many stations to a line
+      
+    DMO843 = Adding a station block. Yet the card does not exist
+      
+    DMO844 = Unable to allocate larger terminal number list call store block.
+      
+    DMO845 = Unable to allocate larger terminal number list data store block
+      
+    DMO846 = Adding a station blok yet card is not a line card
+      
+    DMO847 = Channels still exist on DCM shelf being deleted
+      
+    DMO848 = Unable to allocate data store for the DCM maintance pack
+      
+    DMO849 = Unable to allocate call store for the DCM maintance pack
+      
+    DMO850 = Unable to allocate data store for the AMA billing table
+      
+    DMO851 = DCM being deleted of wrong type
+      
+    DMO852 = DCM being changed does not exist
+      
+    DMO853 = DCM being changed on wrong type of shelf
+      
+    DMO854 = Cannot allocate data store for the incoming trunk group CO list
+      
+    DMO855 = Unexpected failure from TN_TRANS
+      
+    DMO856 = Standby terminal number not found in list
+      
+    DMO857 = Unable to allocate Spare_List_DBLK
+      
+    DMO858 = DCM maintenance pack is still active - DCM cannot be deleted
+      
+    DMO859 = Trunk being deleted is active - operation not allowed
+      
+    DMO860 = Unable to allocate operational measurements PBLK for incoming or 
+             2WAY trunk group
+               
+    DMO861 = Unable to allocate operational measurements PBLK for outgoing or 
+             2WAY trunk group
+               
+    DMO862 = Site does not exist. Invalid 'ST_EXP_BITS' in 'TAPE_STN_BLOCK'.
+      
+    DMO863 = Card does not exist. Trunk not processed
+      
+    DMO864 = Add trunk block being processed when already assigned to a group
+      
+    DMO865 = Shelves still exist on the mate loop
+      
+    DMO866 = Unable to allocate data store station block
+      
+    DMO867 = Unable to allocate hunt group data store index block
+      
+    DMO868 = Unable to allocate data store channel block
+      
+    DMO869 = Unable to allocate store for DCM on frame
+      
+    DMO870 = Loop for DCM being added does not exist
+      
+    DMO871 = DCM being deleted does not exist
+      
+    DMO872 = Unable to allocate data store for the DCM shelf block
+      
+    DMO873 = DCM canot be added to loop
+      
+    DMO874 = Station being deleted is active - operation not allowed
+      
+    DMO875 = Spare_Head_DPTR is nil. Delete block encoutered
+      
+    DMO877 = Pack is still in use. Cannot be deleted
+      
+    DMO878 = Data integrity error when processing the CPSC trunk
+      
+    DMO879 = Site being deleted does not exist
+      
+    DMO880 = Loop does not exist for REM being added. Site mnemonics assigned 
+             while Site_DBLK & Site_DBLK not assigned.
+      
+    DMO881 = Invalid loop or mate loop type for REM being added
+      
+    DMO882 = Unable to allocate store for REM DBLK
+      
+    DMO883 = Unable to allocate store for REM CBLK
+      
+    DMO884 = Site does not exist for PE frame being added
+      
+    DMO885 = Shelf for OCM or RCM not a REM shelf
+      
+    DMO886 = Unable to allocate REM shelf data block
+      
+    DMO887 = REM being deleted does not exist
+      
+    DMO888 = Cannot delete REM. Remote shelves are equipped.
+      
+    DMO889 = There are no changeable custom calling features in the office
+      
+    DMO890 = Unable to allocate unprotected call store terminal # list block
+      
+    DMO891 = Unable to allocate data store terminal # list block
+      
+    DMO892 = CO code being added already exists. Invalid response to 'TCFW' -
+               must be "yes" or "no".
+      
+    DMO893 = CO code table is full - maximum 8 entries
+      
+    DMO894 = Unable to allocate data store for carrier group list
+      
+    DMO895 = Unable to add trunk to carrier group list
+      
+    DMO896 = Attempt to delete trunk from empty carrier group list
+      
+    DMO897 = Trunk not found in carrier group list
+      
+    DMO898 = Unable to assign call store for Site_CBLK
+      
+    DMO899 = Unable to assign data store for Site_DBLK
+      
+    DMO900 = CCB storage for backing up speed call lists has been exhausted.
+             This is a warning only. Service change has been accepted. In the
+             event of a sysload in this overflow condition. Some speed call
+             lists will be lost. The number of speed callers that can be 
+             backed up is defined by this formula: 33 x Short_Spd_Callers +
+             121 x Long_Spd_Callers <= 24573.
+               
+    DMO901 = AMA not equipped in the configuration record
+      
+    DMO902 = Data integrity error - no CO codes declared
+      
+    DMO903 = CO code being deleted does not exist
+      
+    DMO904 = Unable to add SBLN to standby list
+      
+    DMO905 = Unable to allocate data store trunk group block
+      
+    DMO950 = Impossible to access tape. Memory not updated
+      
+    DMO951 = Unable to initialize the tape
+      
+    DMO952 = Unable to read last record in order to start a tape write. 
+             Memory not updted.
+               
+    DMO953 = Tapewrite unsuccessful. Memory updated
+      
+    DMO954 = Unable to write last record on tape. Memory updated.
+      
+    DMO955 = EOF not written onto tape.
+      
+    DMO956 = Unable to write EOF on tape.
+      
+    DMO957 = Only valid response to LNLK is a number between 0 to 255
+      
+    DMO958 = Valid responses are numeric from 0 to 30
+      
+    DMO965 = Check pic - must be 4 digits 0??? (example: 0288)
+    
+    DMO966 = Invalid PIC Choice entered , try again or not a valid pic for SW
+      
+    DMO999 = Invalid 'TN_BLOCK_TYPE' field found in data
